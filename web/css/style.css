@@ -2298,21 +2298,25 @@ ul {
 
 /* line 76, /Applications/MAMP/htdocs/palash/cl/july 2019/193 Travel/193 travel html/sass/_menu.scss */
 .dropdown:hover .dropdown-menu {
-  display: block;
+  display: inline-flex;
 }
 
 /* line 82, /Applications/MAMP/htdocs/palash/cl/july 2019/193 Travel/193 travel html/sass/_menu.scss */
 .dropdown .dropdown-menu {
+  padding : 30px 40px 30px 40px;
   transition: all 0.5s;
+  left : -250px;
   overflow: hidden;
   transform-origin: top center;
   transform: scale(1, 0);
-  display: block;
   margin-top: 0px;
   border: 0px solid rgba(0, 0, 0, 0.15) !important;
   background-color: #fafafa;
 }
 
+.dropdown .dropdown-item-header{
+  font-weight: bold;
+}
 /* line 92, /Applications/MAMP/htdocs/palash/cl/july 2019/193 Travel/193 travel html/sass/_menu.scss */
 .dropdown .dropdown-item {
   text-transform: capitalize;
