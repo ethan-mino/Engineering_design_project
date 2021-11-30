@@ -33,9 +33,45 @@
             .main_menu_iner{
                 box-shadow: 0px 10px 15px rgb(0 0 0 / 5%);
             }
+
+            .blog_area span:hover, .blog_area span.active{
+                cursor : pointer;
+                background: -webkit-linear-gradient(131deg, #feb47b 0%, #ff7e5f 99%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                text-decoration: none;
+                -webkit-transition: 0.5s;
+                transition: 0.5s;
+            }
+
+            .confirm-button{
+                margin-right : 110px;
+            }
+
+            .content {
+                margin-left: 30px;
+            }
+
+            .client_review{
+                padding : 50px 0px;
+            }
+
+            .client_review_slider{
+                display: flex !important;
+                flex-direction: column;
+                justify-items: center;
+            }
+
+            .client_review .owl-nav{
+                position: relative;
+                top : unset;
+                margin-top: 20px;
+                margin-left: auto;
+                margin-right: auto;
+            }
         </style>
     </head>
-    <br>
+    <body>
         <header class="main_menu">
             <div class="main_menu_iner">
                 <div class="container">
@@ -126,45 +162,144 @@
                     <div class="blog_right_sidebar">
                         <aside class="single_sidebar_widget post_category_widget">
                             <ul class="list cat-list">
-                                <li><a href="#" class="d-flex"><p>내 정보</p></a></li>
-                                <li><a href="#" class="d-flex"><p>마이 옷장</p></a></li>
-                                <li><a href="#" class="d-flex"><p>나만의 코디</p></a></li>
-                                <li><a href="#" class="d-flex"><p>스타일 분석</p></a></li>
-                                <li><a href="#" class="d-flex"><p>구매 이력</p></a></li>
+                                <li><span href="#" class="d-flex user-info"><p>내 정보</p></span></li>
+                                <li><span href="#" class="d-flex my-closet"><p>마이 옷장</p></span></li>
+                                <li><span href="#" class="d-flex my-cody"><p>나만의 코디</p></span></li>
+                                <li><span href="#" class="d-flex style-analysis"><p>스타일 분석</p></span></li>
+                                <li><span href="#" class="d-flex purchase-history"><p>구매 이력</p></span></li>
                             </ul>
                         </aside>
                     </div>
                 </div>
 
-                <script>
-                    $(".cat-list a").on("click", () => {
-                        console.log("asd")
-                    })
-                </script>
+                <div class="content col-lg-8 mb-5 mb-lg-0">
+                    <div class="user-info">
+                        <div class="add-product__row">
+                            <div class = "add-product__row-header">아이디</div>
+                            <input type="text" class= "add-product__input input-large" data-label = "productName" placeholder="아이디 입력" value = "smusmu2021">
+                        </div>
 
-                <div class="col-lg-8 mb-5 mb-lg-0">
-                    <div class="blog_left_sidebar">
-                        <article class="blog_item">
-                            <div class="blog_item_img">
-                                <img class="card-img rounded-0" src="img/blog/single_blog_1.png" alt="">
-                                <a href="#" class="blog_item_date">
-                                    <h3>15</h3>
-                                    <p>Jan</p>
-                                </a>
-                            </div>
+                        <div class="add-product__row">
+                            <div class = "add-product__row-header">비밀번호</div>
+                            <input type="password" class= "add-product__input input-large" placeholder="비밀번호 입력" value = "smusmu2021">
+                        </div>
 
-                            <div class="blog_details">
-                                <a class="d-inline-block" href="single-blog.html">
-                                    <h2>Google inks pact for new 35-storey office</h2>
-                                </a>
-                                <p>That dominion stars lights dominion divide years for fourth have don't stars is that
-                                    he earth it first without heaven in place seed it second morning saying.</p>
-                                <ul class="blog-info-link">
-                                    <li><a href="#"><i class="far fa-user"></i> Travel, Lifestyle</a></li>
-                                    <li><a href="#"><i class="far fa-comments"></i> 03 Comments</a></li>
-                                </ul>
+                        <div class="add-product__row">
+                            <div class = "add-product__row-header">주소</div>
+                            <input type="text" class= "add-product__input input-large" placeholder="비밀번호 입력" value = "서울시 종로구 홍지문2길 20 상명대학교">
+                        </div>
+
+                        <div class="add-product__row">
+                            <div class = "add-product__row-header">체형 </div>
+                            <select class= "add-product__input input-large">
+                                <option value="">모래시계 체형</option>
+                                <option value="">역삼각형 체형</option>
+                                <option value="">삼각형 체형</option>
+                                <option value="">일자형 체형</option>
+                                <option value="">타원형 체형</option>
+                            </select>
+                        </div>
+
+                        <div class="add-product__row">
+                            <div class = "add-product__row-header">키</div>
+                            <input type="text" class= "add-product__input input-large" placeholder="키 입력" inputmode="numeric" value = "177">
+                        </div>
+
+                        <div class="add-product__row">
+                            <div class = "add-product__row-header">체중</div>
+                            <input type="text" class= "add-product__input input-large" placeholder="체중 입력" inputmode="numeric" value = "70">
+                        </div>
+
+                        <div class="add-product__row">
+                            <div class = "add-product__row-header">다리 길이</div>
+                            <input type="text" class= "add-product__input input-large" placeholder="다리길이 입력" inputmode="numeric" value = "105">
+                        </div>
+
+                        <div class="add-product__row">
+                            <div class = "add-product__row-header">상의 사이즈</div>
+                            <input type="text" class= "add-product__input input-large" placeholder="상의 사이즈 입력" inputmode="numeric" value = "105">
+                        </div>
+
+                        <div class="add-product__row">
+                            <div class = "add-product__row-header">허리 사이즈</div>
+                            <input type="text" class= "add-product__input input-large" placeholder="허리 사이즈 입력" inputmode="numeric" value = "30">
+                        </div>
+
+                        <div class="add-product__row">
+                            <div class = "add-product__row-header">신발 사이즈</div>
+                            <input type="text" class= "add-product__input input-large" placeholder="신발 사이즈 입력" inputmode="numeric" value = "260">
+                        </div>
+
+                        <button type="button" class ="confirm-button" data-label = "user_info_update" style = "float: right">수정</button>
+                    </div>
+
+                    <div class="my-closet" style = "display : none">
+                        <div class="add-product__row">
+                            <div class = "add-product__row-header">옷 유형</div>
+                            <select class= "add-product__input input-small" data-label = "clothes_type1" style = "margin-right: 30px">
+                                <option value="">아우터</option>
+                                <option value="">상의</option>
+                                <option value="">하의</option>
+                                <option value="">액세서리</option>
+                                <option value="">원피스</option>
+                            </select>
+
+                            <select class= "add-product__input input-small" data-label = "clothes_type2">
+                                <option value=""> - </option>
+                            </select>
+                        </div>
+
+                        <section class="client_review section_padding">
+                            <div class="container">
+                                <div class="row ">
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="client_review_slider owl-carousel">
+                                            <div class="single_review_slider">
+                                                <img src="이미지.png" width="300" height="200">
+                                                <p></p>
+                                                <h5> - 옥스퍼드</h5>
+                                            </div>
+                                            <div class="single_review_slider">
+                                                <img src="이미지.png" width="300" height="200">
+                                                <p></p>
+                                                <h5> - 옥스퍼드</h5>
+                                            </div>
+                                            <div class="single_review_slider">
+                                                <img src="이미지.png" width="300" height="200">
+                                                <p></p>
+                                                <h5> - 옥스퍼드</h5>
+                                            </div>
+                                            <div class="single_review_slider">
+                                                <img src="이미지.png" width="300" height="200">
+                                                <p></p>
+                                                <h5> - 옥스퍼드</h5>
+                                            </div>
+                                            <div class="single_review_slider">
+                                                <img src="이미지.png" width="300" height="200">
+                                                <p></p>
+                                                <h5> - 옥스퍼드</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </article>
+                        </section>
+
+                        <button type="button" class ="confirm-button" data-label = "clothes_upload" onclick = "window.location.href = './clothes_upload.html'" style = "float: right; margin-right: 0px">옷 업로드</button>
+                    </div>
+
+                    <div class="my-cody" style = "display : none">
+c
+                    </div>
+
+                    <div class="style-analysis" style = "display : none">
+d
+                    </div>
+
+                    <div class="purchase-history" style = "display : none">
+e
                     </div>
                 </div>
             </div>
@@ -209,6 +344,44 @@
                 </div>
             </div>
         </footer>
+
+        <script>
+            $(".cat-list span").on("click", (event) => {
+                const target = event.target
+                const targetClass = $(target).closest("span").attr("class").split(" ")[1]
+
+                $(".cat-list span").removeClass("active")
+                $(target).closest("span").addClass("active")
+
+                $(`.content`).children("div").css("display", "none")
+                $(`.content div.${targetClass}`).css("display", "block")
+            })
+
+            $("button[data-label = 'user_info_update']").on("click", () => {
+                swalAlert({icon : "success", html : "수정되었습니다."})
+            })
+
+            $("select[data-label = 'clothes_type1']").on("change", (event) => {
+                const target = event.target
+
+                const optionDict = {
+                    "아우터" : ["재킷 / 코트", "캐주얼 아우터", "다운", "울트라라이트다운"],
+                    "상의" : ["후리스", "니트", "캐시미어", "스웨트셔츠 / 후디", "셔츠 / 블라우스", "티셔츠", "UT(그래픽티셔츠)"],
+                    "하의" : ["진", "히트텍팬츠", "스마트팬츠", "캐주얼팬츠", "레깅스팬츠", "스커트"],
+                    "액세서리" : ["벨트", "가방", "신발", "우산", "모자", "스카프", "양말"],
+                    "원피스" : ["-"]
+                }
+
+                const selectedOption = $(target).children("option:selected").text()
+                const $type2Elem = $("select[data-label = 'clothes_type2']")
+                $type2Elem.empty()
+
+                for (let option of optionDict[selectedOption]){
+                    $type2Elem.append(`<option value="">${option}</option>`)
+                }
+            })
+        </script>
+
         <!-- footer part end-->
         <!-- jquery plugins here-->
         <script src="js/jquery-1.12.1.min.js"></script>
@@ -233,5 +406,8 @@
         <script src="js/contact.js"></script>
         <!-- custom js -->
         <script src="js/custom.js"></script>
+        <script src="js/common.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     </body>
 </html>
