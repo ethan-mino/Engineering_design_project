@@ -1334,6 +1334,19 @@ ul {
   }
 }
 
+; /*main blog details*/
+.main_blog_details {
+    
+}
+@media (min-width: 768px) {
+    /* line 529, /Applications/MAMP/htdocs/palash/cl/july 2019/193 Travel/193 travel html/sass/_blog.scss */
+    .main_blog_details {
+       
+    }
+}
+
+
+
 /* line 537, /Applications/MAMP/htdocs/palash/cl/july 2019/193 Travel/193 travel html/sass/_blog.scss */
 .blog_details p {
   margin-bottom: 30px;
@@ -3413,10 +3426,20 @@ ul {
 }
 
 /* line 17, /Applications/MAMP/htdocs/palash/cl/july 2019/193 Travel/193 travel html/sass/_client_review.scss */
-.client_review .single_review_slider h5 {
-  font-weight: 18px;
-  color: #fff;
-}
+    .client_review .single_review_slider h5 {
+        font-weight: 18px;
+        color: #000000;
+    }
+
+    /*수정한 부분*/
+    
+    .client_review .single_review_slider det {
+        text-decoration: line-through
+    }
+
+    .client_review .single_review_slider det2 {
+        font-weight: bold
+    }
 
 /* line 21, /Applications/MAMP/htdocs/palash/cl/july 2019/193 Travel/193 travel html/sass/_client_review.scss */
 .client_review .single_review_slider .place_review {
