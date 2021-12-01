@@ -28,23 +28,38 @@
         <link rel="stylesheet" href="css/slick.css">
         <!-- style CSS -->
         <link rel="stylesheet" href="css/style.css">
+
         <style>
             img.card-img {
-                width: 300px;
+                width: 280px;
                 height: 300px;
                 object-fit: cover;
-                text-align: center;
             }
+
             img.pop-img {
                 width: 100px;
                 height: 150px;
                 object-fit: cover;
             }
+
             h2.d-inline-block{
                 font-size: x-small;
             }
+
+            .container{
+                max-width: 1400px;
+            }
             .blog_details {
                 padding: 20px 10px 10px 10px;
+            }
+
+            .blog_container{
+                display: flex;
+                margin-top: 30px;
+            }
+
+            .blog_item{
+                margin : 0px 10px;
             }
         </style>
     </head>
@@ -156,111 +171,115 @@
                 <div class="row">
                     <div class="col-lg-8 mb-5 mb-lg-0">
                         <div class="blog_left_sidebar">
-                            <article class="blog_item">
-                                <div class="blog_item_img">
-                                    <img class="card-img" src="img/community/스타일1.png" alt="">
-                                </div>
+                            <div class="blog_container">
+                                <article class="blog_item">
+                                    <div class="blog_item_img">
+                                        <img class="card-img" src="img/community/스타일1.png" alt="">
+                                    </div>
 
-                                <div class="blog_details">
-                                    <a class="d-inline-block" href="single-blog.html">
-                                        <h2>스타일 1</h2>
-                                    </a>
-                                    <p>스타일 카테고리</p>
-                                    <ul class="blog-info-link">
-                                        <li><a href="#"><i class="far fa-user"></i> 좋아요 09</a></li>
-                                        <li><a href="#"><i class="far fa-comments"></i> 댓글 03 </a></li>
-                                    </ul>
-                                </div>
-                            </article>
-
-                            <article class="blog_item">
-                                <div class="blog_item_img">
-                                    <img class="card-img" src="img/community/스타일6.png" alt="">
-                                </div>
-
-                                <div class="blog_details">
-                                    <a class="d-inline-block" href="single-blog(1).html">
-                                        <h2>스타일 2</h2>
-                                    </a>
-                                    <p>스타일 카테고리</p>
-                                    <ul class="blog-info-link">
-                                        <li><a href="#"><i class="far fa-user"></i> 좋아요 02 </a></li>
-                                        <li><a href="#"><i class="far fa-comments"></i> 댓글 02 </a></li>
-                                    </ul>
-                                </div>
-                            </article>
-
-                            <article class="blog_item">
-                                <div class="blog_item_img">
-                                    <img class="card-img" src="img/community/스타일3.png" alt="">                       </div>
-
-                                <div class="blog_details">
-                                    <a class="d-inline-block" href="single-blog(2).html">
-                                        <h2>스타일3</h2>
-                                    </a>
-                                    <p>스타일 카테고리</p>
-                                    <ul class="blog-info-link">
-                                        <li><a href="#"><i class="far fa-user"></i> 좋아요 13</a></li>
-                                        <li><a href="#"><i class="far fa-comments"></i> 댓글 04 </a></li>
-                                    </ul>
-                                </div>
-                            </article>
-
-                            <article class="blog_item">
-                                <div class="blog_item_img">
-                                    <img class="card-img" src="img/community/스타일4.png" alt="">
-                                </div>
-
-                                <div class="blog_details">
-                                    <a class="d-inline-block" href="single-blog(3).html">
-                                        <h2>스타일4</h2>
-                                    </a>
-                                    <p>스타일 카테고리</p>
-                                    <ul class="blog-info-link">
-                                        <li><a href="#"><i class="far fa-user"></i> 좋아요 08 </a></li>
-                                        <li><a href="#"><i class="far fa-comments"></i> 댓글 02 </a></li>
-                                    </ul>
-                                </div>
-                            </article>
-
-                            <article class="blog_item">
-                                <div class="blog_item_img">
-                                    <img class="card-img" src="img/community/스타일5.png" alt="">
-                                </div>
-
-                                <div class="blog_details">
-                                    <a class="d-inline-block" href="single-blog(4).html">
-                                        <h2>스타일5</h2>
-                                    </a>
-                                    <p>스타일 카테고리</p>
-                                    <ul class="blog-info-link">
-                                        <li><a href="#"><i class="far fa-user"></i> 좋아요 09 </a></li>
-                                        <li><a href="#"><i class="far fa-comments"></i> 댓글 01 </a></li>
-                                    </ul>
-                                </div>
-                            </article>
-
-                            <nav class="blog-pagination justify-content-center d-flex">
-                                <ul class="pagination">
-                                    <li class="page-item">
-                                        <a href="#" class="page-link" aria-label="Previous">
-                                            <i class="ti-angle-left"></i>
+                                    <div class="blog_details">
+                                        <a class="d-inline-block" href="single-blog.html">
+                                            <h2>스타일 1</h2>
                                         </a>
-                                    </li>
-                                    <li class="page-item">
-                                        <a href="#" class="page-link">1</a>
-                                    </li>
-                                    <li class="page-item active">
-                                        <a href="#" class="page-link">2</a>
-                                    </li>
-                                    <li class="page-item">
-                                        <a href="#" class="page-link" aria-label="Next">
-                                            <i class="ti-angle-right"></i>
+                                        <p>스타일 카테고리</p>
+                                        <ul class="blog-info-link">
+                                            <li><a href="#"><i class="far fa-user"></i> 좋아요 09</a></li>
+                                            <li><a href="#"><i class="far fa-comments"></i> 댓글 03 </a></li>
+                                        </ul>
+                                    </div>
+                                </article>
+
+                                <article class="blog_item">
+                                    <div class="blog_item_img">
+                                        <img class="card-img" src="img/community/스타일6.png" alt="">
+                                    </div>
+
+                                    <div class="blog_details">
+                                        <a class="d-inline-block" href="single-blog(1).html">
+                                            <h2>스타일 2</h2>
                                         </a>
-                                    </li>
-                                </ul>
-                            </nav>
+                                        <p>스타일 카테고리</p>
+                                        <ul class="blog-info-link">
+                                            <li><a href="#"><i class="far fa-user"></i> 좋아요 02 </a></li>
+                                            <li><a href="#"><i class="far fa-comments"></i> 댓글 02 </a></li>
+                                        </ul>
+                                    </div>
+                                </article>
+
+                                <article class="blog_item">
+                                    <div class="blog_item_img">
+                                        <img class="card-img" src="img/community/스타일3.png" alt="">                       </div>
+
+                                    <div class="blog_details">
+                                        <a class="d-inline-block" href="single-blog(2).html">
+                                            <h2>스타일3</h2>
+                                        </a>
+                                        <p>스타일 카테고리</p>
+                                        <ul class="blog-info-link">
+                                            <li><a href="#"><i class="far fa-user"></i> 좋아요 13</a></li>
+                                            <li><a href="#"><i class="far fa-comments"></i> 댓글 04 </a></li>
+                                        </ul>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <div class="blog_container">
+                                <article class="blog_item">
+                                    <div class="blog_item_img">
+                                        <img class="card-img" src="img/community/스타일4.png" alt="">
+                                    </div>
+
+                                    <div class="blog_details">
+                                        <a class="d-inline-block" href="single-blog(3).html">
+                                            <h2>스타일4</h2>
+                                        </a>
+                                        <p>스타일 카테고리</p>
+                                        <ul class="blog-info-link">
+                                            <li><a href="#"><i class="far fa-user"></i> 좋아요 08 </a></li>
+                                            <li><a href="#"><i class="far fa-comments"></i> 댓글 02 </a></li>
+                                        </ul>
+                                    </div>
+                                </article>
+
+                                <article class="blog_item">
+                                    <div class="blog_item_img">
+                                        <img class="card-img" src="img/community/스타일5.png" alt="">
+                                    </div>
+
+                                    <div class="blog_details">
+                                        <a class="d-inline-block" href="single-blog(4).html">
+                                            <h2>스타일5</h2>
+                                        </a>
+                                        <p>스타일 카테고리</p>
+                                        <ul class="blog-info-link">
+                                            <li><a href="#"><i class="far fa-user"></i> 좋아요 09 </a></li>
+                                            <li><a href="#"><i class="far fa-comments"></i> 댓글 01 </a></li>
+                                        </ul>
+                                    </div>
+                                </article>
+                            </div>
                         </div>
+
+                        <nav class="blog-pagination justify-content-center d-flex">
+                            <ul class="pagination">
+                                <li class="page-item">
+                                    <a href="#" class="page-link" aria-label="Previous">
+                                        <i class="ti-angle-left"></i>
+                                    </a>
+                                </li>
+                                <li class="page-item">
+                                    <a href="#" class="page-link">1</a>
+                                </li>
+                                <li class="page-item active">
+                                    <a href="#" class="page-link">2</a>
+                                </li>
+                                <li class="page-item">
+                                    <a href="#" class="page-link" aria-label="Next">
+                                        <i class="ti-angle-right"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
                     <div class="col-lg-4">
                         <div class="blog_right_sidebar">
@@ -369,9 +388,6 @@
                                         <a href="#">치마</a>
                                     </li>
                                     <li>
-                                        <a href="#">슬랙스</a>
-                                    </li>
-                                    <li>
                                         <a href="#">니트</a>
                                     </li>
                                     <li>
@@ -385,6 +401,9 @@
                                     </li>
                                     <li>
                                         <a href="#">모자</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">슬랙스</a>
                                     </li>
                                     <li>
                                         <a href="#">악세사리</a>
