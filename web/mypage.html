@@ -27,6 +27,7 @@
         <link rel="stylesheet" href="css/slick.css">
         <!-- style CSS -->
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/calendar.css">
 
         <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
         <style>
@@ -34,7 +35,7 @@
                 box-shadow: 0px 10px 15px rgb(0 0 0 / 5%);
             }
 
-            .blog_area span:hover, .blog_area span.active{
+            .blog_area .d-flex:hover, .blog_area span.active{
                 cursor : pointer;
                 background: -webkit-linear-gradient(131deg, #feb47b 0%, #ff7e5f 99%);
                 -webkit-background-clip: text;
@@ -68,6 +69,16 @@
                 margin-top: 20px;
                 margin-left: auto;
                 margin-right: auto;
+            }
+
+            h4{
+                font-weight: bold;
+            }
+
+            .cody_img{
+                width : 250px;
+                height : 300px;
+                object-fit: cover;
             }
         </style>
     </head>
@@ -249,8 +260,6 @@
 
                         <section class="client_review section_padding">
                             <div class="container">
-                                <div class="row ">
-                                </div>
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <div class="client_review_slider owl-carousel">
@@ -289,7 +298,60 @@
                     </div>
 
                     <div class="my-cody" style = "display : none">
-c
+                        <h4>나만의 코디</h4>
+                        <section class="client_review section_padding">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="client_review_slider owl-carousel">
+                                            <div class="single_review_slider">
+                                                <img src="이미지.png" width="300" height="200">
+                                                <p></p>
+                                                <h5> - 옥스퍼드</h5>
+                                            </div>
+                                            <div class="single_review_slider">
+                                                <img src="이미지.png" width="300" height="200">
+                                                <p></p>
+                                                <h5> - 옥스퍼드</h5>
+                                            </div>
+                                            <div class="single_review_slider">
+                                                <img src="이미지.png" width="300" height="200">
+                                                <p></p>
+                                                <h5> - 옥스퍼드</h5>
+                                            </div>
+                                            <div class="single_review_slider">
+                                                <img src="이미지.png" width="300" height="200">
+                                                <p></p>
+                                                <h5> - 옥스퍼드</h5>
+                                            </div>
+                                            <div class="single_review_slider">
+                                                <img src="이미지.png" width="300" height="200">
+                                                <p></p>
+                                                <h5> - 옥스퍼드</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="button" class ="confirm-button" data-label = "add_cody" onclick="window.location.href = './add_cody.html'" style = "float: right; margin : 0px 15px 0px 0px">코디 추가</button>
+                        </section>
+
+                        <h4>코디 달력</h4>
+                        <section class="client_review section_padding" style = "border-top : 1px soild lightgray; display: flex">
+                            <div id='app' style = "width : 400px"></div>
+
+                            <div class="single_review_slider" style="padding : 5px; width : 260px; margin-left: 30px;">
+                                <div class = "cody_container" style="display : none">
+                                    <img src="" class = "cody_img">
+                                    <h5></h5>
+                                    <p></p>
+                                </div>
+                            </div>
+
+                        </section>
+
+                        <button type="button" class ="confirm-button" data-label = "record_cody" onclick="window.location.href = './add_cody.html'" style = "float: right; margin : 0px 15px 0px 0px; display : none">코디 기록</button>
                     </div>
 
                     <div class="style-analysis" style = "display : none">
@@ -383,6 +445,7 @@ e
         <!-- footer part end-->
         <!-- jquery plugins here-->
         <script src="js/jquery-1.12.1.min.js"></script>
+        <script src="js/calendar.js"></script>
         <!-- popper js -->
         <script src="js/popper.min.js"></script>
         <!-- bootstrap js -->
