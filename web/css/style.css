@@ -627,7 +627,7 @@ ul {
 @media only screen and (min-width: 1200px) and (max-width: 3640px) {
   /* line 242, /Applications/MAMP/htdocs/palash/cl/july 2019/193 Travel/193 travel html/sass/_common.scss */
   .container {
-    max-width: 1170px;
+    max-width: 1200px;
   }
 }
 
@@ -5791,4 +5791,3 @@ h6 {
   margin-bottom: 10px;
 }
 
-/*# sourceMappingURL=../css/style.map */
