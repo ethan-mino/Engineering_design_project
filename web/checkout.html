@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>패션피플</title>
     <link rel="icon" href="img/favicon.png" type="image/png">
+
     <link rel="stylesheet" href="vendors/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="vendors/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="vendors/themify-icons/themify-icons.css">
@@ -70,15 +71,10 @@
         marbut {
             padding-left: 170px;
         }
-        .pad-purchase {padding-left:180px;}
-        .product-size {
-            width: 300px;
-            height:300px;
+        .pad {padding-top:80px;}
+        .font1 {
+            color:black !important;
         }
-        .size {padding-left: 50px;}
-        .siz2 {padding-right:50px;}
-        .td {width:200px !important;}
-        
     </style>
 </head>
 <body>
@@ -170,173 +166,129 @@
             <div class="blog-banner">
                 <div class="text-center">
                     <h1>패션피플</h1>
-                    
+                   
                 </div>
             </div>
         </div>
     </section>
     <!-- ================ end banner area ================= -->
-    <!--================Cart Area =================-->
-    <section class="cart_area">
+    <!--================Checkout Area =================-->
+    <section class="checkout_area section-margin--small">
         <div class="container">
-            <div class="cart_inner">
-                <div class="table-responsive">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th scope="col">상품정보</th>
-                                <th scope="col">가격</th>
-                                <th scope="col">수량</th>
-                                <th scope="col">총 금액</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <div class="media">
-                                        <div class="d-flex">
-                                            <img class="product-size" src="img/main/코트1.jpg" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <p>오버사이즈 멜톤 더플 롱 코트 (네이비)</p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <h5>95,400원</h5>
-                                </td>
-                                <td>
-                                    <div class="product_count">
-                                        <input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:"
-                                               class="input-text qty">
-                                        <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
-                                                class="increase items-count" type="button">
-                                            <i class="lnr lnr-chevron-up"></i>
-                                        </button>
-                                        <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;"
-                                                class="reduced items-count" type="button">
-                                            <i class="lnr lnr-chevron-down"></i>
-                                        </button>
-                                    </div>
-                                </td>
-                                <td>
-                                    <h5>95,400원</h5>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="media">
-                                        <div class="d-flex">
-                                            <img class =" product-size"src="img/buy/브랜드2.jpg " alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <p>EV T 패치 가디건 (블랙)</p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <h5>41,100원</h5>
-                                </td>
-                                <td>
-                                    <div class="product_count">
-                                        <input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:"
-                                               class="input-text qty">
-                                        <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
-                                                class="increase items-count" type="button">
-                                            <i class="lnr lnr-chevron-up"></i>
-                                        </button>
-                                        <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;"
-                                                class="reduced items-count" type="button">
-                                            <i class="lnr lnr-chevron-down"></i>
-                                        </button>
-                                    </div>
-                                </td>
-                                <td>
-                                    <h5>41,100원</h5>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="media">
-                                        <div class="d-flex">
-                                            <img class="product-size" src="img/buy/티셔츠1.jpg" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <p>T-Logo L/SL Top (블랙)</p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <h5>23,000원</h5>
-                                </td>
-                                <td>
-                                    <div class="product_count">
-                                        <input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:"
-                                               class="input-text qty">
-                                        <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
-                                                class="increase items-count" type="button">
-                                            <i class="lnr lnr-chevron-up"></i>
-                                        </button>
-                                        <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;"
-                                                class="reduced items-count" type="button">
-                                            <i class="lnr lnr-chevron-down"></i>
-                                        </button>
-                                    </div>
-                                </td>
-                                <td>
-                                    <h5>23,000원</h5>
-                                </td>
-                            </tr>
-                            <tr class="bottom_button">
-                                <td>
-                                    <a class="button" href="#">새로고침</a>
-                                </td>
-                                <td>
-                                </td>
-                                <td>
-                                </td>
-                                <td>
-                                    <div class="cupon_text d-flex align-items-center">
-                                        <input type="text" placeholder="Code">
-                                        <a class="primary-btn" href="#">적용하기</a>
-                                        <a class="button" href="#">쿠폰 확인</a>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                </td>
-                                <td>
-                                </td>
-                                <td width="150";>
-                                    <h5 class="">최종 금액</h5>
-                                </td>
-                                <td class="td">
-                                    <h5 class="size2">159,500원 </h5>
-                                </td>
-                            </tr>
-                           
-                            <tr class="out_button_area">
-                                <td class="d-none-l">
-                                </td>
-                                <td class="">
-                                </td>
-                                <td>
-                                </td>
-                                <td>
-                                    <div class="checkout_btn_inner d-flex align-items-center pad-purchase">
-                                        <a class="gray_btn" href="#">계속 쇼핑하기</a>
-                                        <a class="primary-btn ml-2" href="checkout.html">구매하기</a>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+           
+            <div class="cupon_area">
+                <div class="check_title">
+                    <h2>쿠폰 사용하기 </h2>
+                </div>
+                <input type="text" placeholder="Code">
+                <a class="button button-coupon" href="#">적용하기</a>
+            </div>
+            <div class="billing_details">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <h3>주문인 정보</h3>
+                        <form class="row contact_form" action="#" method="post" novalidate="novalidate">
+                            <div class="col-md-6 form-group p_star">
+                                <input type="text" class="form-control" id="first" name="name" placeholder="홍길동">
+                                <span class="placeholder" data-placeholder="First name"></span>
+                            </div>
+                            <div class="col-md-6 form-group p_star">
+                                <input type="text" class="form-control" id="last" name="name" placeholder="010-1234-5678 ">
+                                <span class="placeholder" data-placeholder="Last name"></span>
+                            </div>
+                            
+                            <div class="col-md-12 form-group">
+                                <input type="text" class="form-control" id="company" name="company" placeholder="desginProject@gmail.com">
+                            </div>
+
+
+
+
+                            
+                        </form>
+                        
+                        <h3 class="pad">받는사람 정보</h3>
+                        <form class="row contact_form" action="#" method="post" novalidate="novalidate">
+                            <div class="col-md-6 form-group p_star">
+                                <input type="text" class="form-control" id="first" name="name" placeholder="홍지동">
+                                <span class="placeholder" data-placeholder="First name"></span>
+                            </div>
+                            <div class="col-md-6 form-group p_star">
+                                <input type="text" class="form-control" id="last" name="name" placeholder="010-9876-5432">
+                                <span class="placeholder" data-placeholder="Last name"></span>
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <input type="text" class="form-control" id="company" name="company" placeholder="desginEngineering@gmail.com">
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <input type="text" class="form-control downPad" id="company" name="company" placeholder="서울특별시 구로구 디지털로26길 38">
+                            </div>
+
+                     
+
+
+                            <div class="col-md-12 form-group mb-0">
+                                <div class="creat_account">
+                                    <h3 class="pad">배달 요청사항</h3>
+
+                                </div>
+                                <textarea class="form-control" name="message" id="message" rows="1"></textarea>
+                            </div>
+
+
+
+                        </form>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="order_box">
+                            <h2>결제 정보</h2>
+                            <ul class="list">
+                                <li><a ><h4 class="font1">상품 <span>총합</span></h4></a></li>
+                                <li><a href="single-product.html">멜톤 더플 롱 코트 (네이비)<span class="middle">x 01</span> <span class="last">95,400원</span></a></li>
+                                <li><a href="single-product2.html">EV T 패치 가디건 (블랙)<span class="middle">x 01</span> <span class="last">41,100원</span></a></li>
+                                <li><a href="single-product.html">T-Logo L/SL Top (블랙)<span class="middle">x 01</span> <span class="last">23,000원</span></a></li>
+                            </ul>
+                            <ul class="list list_2">
+                                <li><a href="#">소계 <span>159,500원</span></a></li>
+                                <li><a href="#">할인 가격 <span>0원</span></a></li>
+                                <li><a href="#">총합 <span>159,500원</span></a></li>
+                            </ul>
+                            <div class="payment_item">
+                                <div class="radion_btn">
+                                    <input type="radio" id="f-option5" name="selector">
+                                    <label for="f-option5">계좌이체</label>
+                                    <div class="check"></div>
+                                </div>
+                                <p>
+                                    무통장 입금, 또는 일반 계좌이체
+                                </p>
+                            </div>
+                            <div class="payment_item active">
+                                <div class="radion_btn">
+                                    <input type="radio" id="f-option6" name="selector">
+                                    <label for="f-option6">신용/체크카드 결제</label>
+                                    <img src="img/product/card.jpg" alt="">
+                                    <div class="check"></div>
+                                </div>
+                                <p>
+                                    신용/체크카드를 이용한 간편결제
+                                </p>
+                            </div>
+                            <div class="creat_account">
+                                <input type="checkbox" id="f-option4" name="selector">
+                                <label for="f-option4">구매조건 확인 및 결제대행 서비스 약관 동의</label>
+                                <a href="#">보기</a>
+                            </div>
+                            <div class="text-center">
+                                <a class="button button-paypal" href="#">결제하기</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <!--================End Cart Area =================-->
+    <!--================End Checkout Area =================-->
     <!--================ Start footer Area  =================-->
     <footer class="footer-area">
         <div class="container">
