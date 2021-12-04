@@ -2855,8 +2855,8 @@ a {
 .single-search-product-wrapper {
     
     max-width:600px;
-  
-    padding: 12px 20px 10px 30px;
+    
+    padding: 10px 20px 10px 20px;
     border: 1px solid #EEEEEE;
 }
 
@@ -3947,7 +3947,7 @@ a {
 
     .cart_inner .table tbody tr td .product_count input {
         width: 100px;
-        padding-left: 30px;
+        
         height: 40px;
         outline: none;
         box-shadow: none
@@ -4005,7 +4005,7 @@ a {
 
 @media (min-width: 991px) {
     .cart_inner .table tbody tr.bottom_button td .cupon_text {
-        margin-left: -465px
+        margin-left: -390px
     }
 }
 
@@ -4271,11 +4271,12 @@ a {
     font-family: "Roboto",sans-serif;
     font-size: 24px;
     font-weight: 700;
-    color: #384aeb;
+    
     margin-bottom: 10px
 }
 
 .s_product_text .list li {
+   
     margin-bottom: 5px
 }
 
@@ -4370,7 +4371,7 @@ a {
             }
 
 .product_count {
-    min-width: 500px;
+    min-width: 100px;
     
     display: inline-block;
     position: relative;
@@ -4476,7 +4477,9 @@ a {
     border-left: 1px solid #eee;
     border-right: 1px solid #eee;
     border-bottom: 1px solid #eee;
-    padding: 30px 30px 15px 30px
+    padding: 30px 30px 15px 30px; 
+    text-align: center;
+   
 }
 
     .product_description_area .tab-content .total_rate .box_total {
