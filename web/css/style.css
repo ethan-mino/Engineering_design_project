@@ -3471,7 +3471,8 @@ ul {
     /*수정한 부분*/
     
     .client_review .single_review_slider det {
-        text-decoration: line-through
+        text-decoration: line-through;
+        color:red;
     }
 
     .client_review .single_review_slider det2 {
