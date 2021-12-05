@@ -22,6 +22,10 @@ function swalConfirm(option) {
     Swal.fire(option)
 }
 
+function shuffle(array) {
+    array.sort(() => Math.random() - 0.5);
+}
+
 function disableSwalConfirmBtn(disable) {
     const confirmButton = $(".swal2-container .swal2-confirm"); // sweetAlert의 확인 버튼
     confirmButton.attr("disabled", disable);   // 버튼을 disable 또는 enable

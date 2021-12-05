@@ -29,6 +29,7 @@
         <link rel="stylesheet" href="css/style.css">
 
         <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+        <script src="js/common.js"></script>
 
         <style>
             .main_menu_iner{
@@ -47,6 +48,20 @@
             .add-product__row{
                 justify-content: center;
             }
+
+            .single_review_slider{
+                padding : 20px 20px 10px 20px !important;
+            }
+
+            .clothes_desc{
+                margin-top : 10px;
+                border-top : 1px solid lightgray;
+                padding-top : 18px;
+            }
+
+            .selected_clothes{
+                border: 3px solid #b4dbed !important;
+             }
         </style>
     </head>
 
@@ -150,35 +165,55 @@
                     </select>
                 </div>
 
-                <section class="client_review section_padding">
+                <section class="client_review section_padding"  style = "padding : 110px 0px 30px 0px">
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="client_review_slider owl-carousel">
                                     <div class="single_review_slider">
                                         <img src="img/mypage/clothes8.jpg" width="300" height="300">
-                                        <p></p>
-                                        <h5> 램스킨 100 라이더 자켓<br />사이즈 L<br />브랜드 도프제이슨</h5>
-                                    </div>
+                                        <div class = "clothes_desc">
+                                            <strong>옷 이름 :</strong> <span class="clothes_name">램스킨 100 라이더 자켓</span> <br/>
+                                            <strong>사이즈 : </strong>  L<br/>
+                                            <strong>색상 : </strong> 검은색<br/>
+                                            <strong>브랜드 :</strong> 도프제이슨</div>
+                                        </div>
                                     <div class="single_review_slider">
                                         <img src="img/mypage/clothes7.jpg" width="300" height="300">
-                                        <p></p>
-                                        <h5> 하프 터틀렉 니트<br />색상 베이지<br />사이즈 L<br />브랜드 수아레</h5>
+                                        <div class = "clothes_desc">
+                                            <strong>옷 이름 :</strong> <span class="clothes_name">하프 터틀렉 니트</span> <br/>
+                                            <strong>사이즈 : </strong> L<br/>
+                                            <strong>색상 : </strong> 베이지<br/>
+                                            <strong>브랜드 :</strong> 수아레
+                                        </div>
                                     </div>
+
                                     <div class="single_review_slider">
                                         <img src="img/mypage/clothes6.jpg" width="300" height="300">
-                                        <p></p>
-                                        <h5> 컷팅 디테일 스트레이트 진<br />사이즈 M<br />브랜드 니어앤디어</h5>
+                                        <div class = "clothes_desc">
+                                            <strong>옷 이름 :</strong> <span class="clothes_name">컷팅 디테일 스트레이트 진</span> <br/>
+                                            <strong>사이즈 : </strong> M<br/>
+                                            <strong>색상 : </strong> 검은색<br/>
+                                            <strong>브랜드 :</strong> 니어앤디어
+                                        </div>
                                     </div>
                                     <div class="single_review_slider">
                                         <img src="img/mypage/clothes10.jpg" width="300" height="300">
-                                        <p></p>
-                                        <h5> 375 웰던 더비 구두 루시 블랙<br />사이즈 270<br />브랜드 비에스큐티바이클래시</h5>
+                                        <div class = "clothes_desc">
+                                            <strong>옷 이름 :</strong> <span class="clothes_name">375 웰던 더비 구두 루시 블랙</span> <br/>
+                                            <strong>사이즈 : </strong> 270<br/>
+                                            <strong>색상 : </strong> 검은색<br/>
+                                            <strong>브랜드 :</strong> 비에스큐티바이클래시
+                                        </div>
                                     </div>
                                     <div class="single_review_slider">
                                         <img src="img/mypage/clothes9.jpg" width="300" height="300">
-                                        <p></p>
-                                        <h5> S.S 체인 목걸이 04<br />사이즈 S<br />브랜드 바이시클트로피</h5>
+                                        <div class = "clothes_desc">
+                                            <strong>옷 이름 :</strong> <span class="clothes_name">S.S 체인 목걸이 04</span> <br/>
+                                            <strong>사이즈 : </strong> 270<br/>
+                                            <strong>색상 : </strong> S<br/>
+                                            <strong>브랜드 :</strong> 바이시클트로피
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -186,11 +221,10 @@
                     </div>
                 </section>
 
-                <section class="client_review section_padding" style = "border-top : 1px soild lightgray; display: flex; flex-direction: column">
-
+                <section class="client_review section_padding" style = "border-top : 1px soild lightgray; display: flex; flex-direction: column; padding : 0px">
                     <div class="add-product__row">
                         <div class="img_container">
-                            <img src="" alt="">
+                            <img src="" style = "width : 400px; object-fit: cover">
                         </div>
                     </div>
 
@@ -201,14 +235,18 @@
 
                     <div class="add-product__row">
                         <div class = "add-product__row-header">스타일</div>
-                        <input type="text" class= "add-product__input input-large" placeholder="스타일 입력" inputmode="numeric" value = "공연룩">
+                        <input type="text" class= "add-product__input input-large" placeholder="스타일 입력" inputmode="numeric">
                     </div>
 
                     <div class="add-product__row">
                         <div class = "add-product__row-header">메모</div>
-                        <input type="text" class= "add-product__input input-large" placeholder="메모 입력" inputmode="numeric" value = "상명대학교 춤 동아리 공연 의상(NCT)">
+                        <input type="text" class= "add-product__input input-large" placeholder="메모 입력" inputmode="numeric">
                     </div>
+
                 </section>
+                <button type="button" class ="confirm-button" data-label = "save" style = "float: right; margin : 0px 15px 0px 0px">저장</button>
+
+                <button type="button" class ="confirm-button" data-label = "cancel" style = "background-color : #eb4a80; float: right; margin : 0px 15px 0px 0px">취소</button>
             </div>
         </div>
 
@@ -243,7 +281,6 @@
                                 <li><a href="#">202110902 권연정</a></li>
                                 <li><a href="#">202110959 이다솔</a></li>
                             </ul>
-
                         </div>
                     </div>
                 </div>
@@ -251,6 +288,37 @@
         </footer>
 
         <script>
+            function shuffle_closet(){
+                const $closet_elem = $(".owl-stage")
+                const $next_btn = $(".owl-next")
+
+                $closet_elem.css("display", "none")
+                $next_btn.click()
+                $next_btn.click()
+                $closet_elem.css("display", "block")
+            }
+
+            (function initialize(){
+                shuffle_closet()
+            })()
+
+            $(document).on("click", ".single_review_slider", (event) => {
+                const target = event.target
+                const clothes_name = $(target).closest(".single_review_slider").children(".clothes_desc").children(".clothes_name")[0].innerText
+                const cody_img_src_list = ["./img/mypage/style1.jpg", "./img/mypage/style2.jpg", "./img/mypage/style3.jpg", "./img/mypage/style4.jpg", "./img/mypage/style5.jpg", "./img/mypage/style6.jpg", "./img/mypage/style7.jpg", "./img/mypage/style8.jpg", "./img/mypage/style9.jpg"]
+                shuffle(cody_img_src_list)
+
+                $(".img_container img").prop("src", cody_img_src_list[0])
+                $(".single_review_slider").removeClass("selected_clothes")
+
+                for (let slider of $(".single_review_slider")){
+
+                    if($(slider).children(".clothes_desc").children(".clothes_name")[0].innerText === clothes_name){
+                        $(slider).addClass("selected_clothes")
+                    }
+                }
+            })
+
             $("select[data-label = 'clothes_type1']").on("change", (event) => {
                 const target = event.target
 
@@ -270,12 +338,27 @@
                     $type2Elem.append(`<option value="">${option}</option>`)
                 }
             })
+
+            $("select[data-label = 'clothes_type2']").on("change", () => {
+                shuffle_closet()
+            })
+
+            $("button[data-label = 'cancel']").on("click", () => {
+                swalConfirm({icon : "question", html : "작성을 취소하시겠습니까?", preConfirm : () =>{
+                        window.location.href = './mypage.html'
+                    }})
+            })
+
+            $("button[data-label = 'save']").on("click", () => {
+                swalAlert({icon : "success", html : "저장되었습니다.", preConfirm : () =>{
+                        window.location.href = './mypage.html'
+                    }})
+            })
         </script>
 
         <!-- footer part end-->
         <!-- jquery plugins here-->
         <script src="js/jquery-1.12.1.min.js"></script>
-        <script src="js/calendar.js"></script>
         <!-- popper js -->
         <script src="js/popper.min.js"></script>
         <!-- bootstrap js -->
@@ -297,7 +380,6 @@
         <script src="js/contact.js"></script>
         <!-- custom js -->
         <script src="js/custom.js"></script>
-        <script src="js/common.js"></script>
 
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     </body>

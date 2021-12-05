@@ -454,9 +454,40 @@ var _cal = (function (cal) {
                     $("button[data-label = 'record_cody']").css("display", "block")
                     $(".cody_container").css("display", "none")
                 }else{
-                    const img_path_list = ["./img/main/아바타1.jpg", "./img/main/아바타2.jpg", "./img/main/아바타3.jpg", "./img/main/아바타4.jpg", "./img/main/아바타5.jpg"]
+                    const img_path_list = ["./img/mypage/style1.jpg", "./img/mypage/style2.jpg", "./img/mypage/style3.jpg", "./img/mypage/style4.jpg", "./img/mypage/style5.jpg"]
                     const random = Math.floor(Math.random() * (4 - 0)) + 0;
                     const img_path = img_path_list[random]
+
+                    const data = [{img_url : "img/mypage/style1.jpg",
+                        top : "Joyrich Net Crewneck",
+                        bottom : "빈폴 레이디스 9부 팬츠",
+                        memo : "지인 결혼식"},
+
+                        {img_url : "img/mypage/style2.jpg",
+                            top : "IDLE EFM 하이넥 스웨터",
+                            bottom : "빈폴 레이디스 9부 팬츠",
+                            memo : "초겨울 출근 룩"},
+
+                        {img_url : "img/mypage/style3.jpg",
+                            top : "멀티 스트라이프 니트",
+                            bottom : "아이렛 장식 미니스커트",
+                            memo : "여름 휴가"},
+
+                        {img_url : "img/mypage/style4.jpg",
+                            top : "Relax sweatshirt",
+                            bottom : "W's ultra stretch jeans",
+                            memo : "친구들 모임"},
+
+                        {img_url : "img/mypage/style5.jpg",
+                            top : "Joyrich Net Crewneck",
+                            bottom : "제이헬렌 포켓 버튼 sk",
+                            memo : "데이트"}]
+
+                        $(".cody_container .clothes_desc").html(`<strong>상의 : </strong>${data[random].top}<br/>
+                        <strong>하의 : </strong>${data[random].bottom}<br/>
+                        <strong>메모 : </strong>${data[random].memo}<br/> `)
+
+
                     $(".cody_container").css("display", "block")
                     $(".cody_img").prop("src", img_path)
 
