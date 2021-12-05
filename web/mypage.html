@@ -89,6 +89,10 @@
                 margin-top : 10px;
                 padding-top : 18px;
             }
+
+            .nav-pills{
+                border : 1px solid lightgray;
+            }
         </style>
     </head>
     <body>
@@ -408,7 +412,13 @@
                     </div>
 
                     <div class="style-analysis" style = "display : none">
-d
+                        <nav class="nav nav-pills flex-column flex-sm-row">
+                            <div class="flex-sm-fill text-sm-center nav-link" data-label = "brand">브랜드별</div>
+                            <div class="flex-sm-fill text-sm-center nav-link" data-label = "color">색상별</div>
+                            <div class="flex-sm-fill text-sm-center nav-link" data-label = "type">유형별</div>
+                        </nav>
+
+                        <img class = "analysis_img" src="" style = "display:none; margin-top : 50px">
                     </div>
 
                     <div class="purchase-history" style = "display : none">
@@ -510,6 +520,26 @@ e
 
             $("select[data-label = 'clothes_type2']").on("change", () => {
                 shuffle_closet()
+            })
+
+            $(".nav-link").on("click", (event) => {
+                const data_list = [{ label : "brand", img_url : "./img/analysis/brand.png"},
+                    { label : "color", img_url : "./img/analysis/color.png"},
+                    { label : "type", img_url : "./img/analysis/type.png"}]
+
+                const target = event.target
+                const target_label = $(target).data("label")
+
+                $(".nav-link").removeClass("active")
+                $(target).addClass("active")
+
+                $(".analysis_img").css("display", "block")
+
+                for (let data of data_list){
+                    if (data.label === target_label){
+                        $(".analysis_img").prop("src", data.img_url)
+                    }
+                }
             })
         </script>
 
