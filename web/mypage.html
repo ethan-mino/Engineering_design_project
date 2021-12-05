@@ -93,6 +93,36 @@
             .nav-pills{
                 border : 1px solid lightgray;
             }
+
+            .table tbody tr td .product_count input {
+                width: 100px;
+                height: 40px;
+                outline: none;
+                box-shadow: none;
+            }
+
+            .product-size{
+                width : 200px;
+                margin-right : 20px
+            }
+
+            .media{
+                display : flex;
+                align-items: center;
+            }
+
+            .product_count{
+                font-size: 16px;
+                margin-bottom : 8px;
+            }
+            td {
+                vertical-align: middle !important;
+                align-self: center;
+            }
+
+            .analysis_img{
+                box-shadow: 0px 10px 15px rgb(0 0 0 / 10%);
+            }
         </style>
     </head>
     <body>
@@ -422,7 +452,91 @@
                     </div>
 
                     <div class="purchase-history" style = "display : none">
-e
+                        <h4><strong>2021.09.21</strong></h4>
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th scope="col">상품정보</th>
+                                <th scope="col">가격</th>
+                                <th scope="col">수량</th>
+                                <th scope="col">총 금액</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <div class="media">
+                                        <div class="d-flex">
+                                            <a href="./single-product.html"> <img class="product-size" src="img/main/코트1.jpg" alt=""></a>
+                                        </div>
+                                        <div class="media-body">
+                                            <a href="./single-product.html"><p>오버사이즈 멜톤 더플 롱 코트 (네이비)</p></a>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <h5>95,400원</h5>
+                                </td>
+                                <td>
+                                    <div class="product_count">
+                                        1
+                                    </div>
+                                </td>
+                                <td>
+                                    <h5>95,400원</h5>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="media">
+                                        <div class="d-flex">
+                                            <a href="./single-product.html"><img class =" product-size"src="img/buy/브랜드2.jpg " alt=""></a>
+                                        </div>
+                                        <div class="media-body">
+                                            <a href="./single-product.html"><p>EV T 패치 가디건 (블랙)</p></a>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <h5>41,100원</h5>
+                                </td>
+                                <td>
+                                    <div class="product_count">
+                                        3
+                                    </div>
+                                </td>
+                                <td>
+                                    <h5>123,300원</h5>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="media">
+                                        <div class="d-flex">
+                                            <a href="./single-product.html"><img class="product-size" src="img/buy/티셔츠1.jpg" alt=""></a>
+                                        </div>
+                                        <div class="media-body">
+                                            <a href="./single-product.html"><p>T-Logo L/SL Top (블랙)</p></a>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <h5>23,000원</h5>
+                                </td>
+                                <td>
+                                    <div class="product_count">
+                                        <div class="product_count">
+                                            2
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <h5>46,000원</h5>
+                                </td>
+                            </tr>
+
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
