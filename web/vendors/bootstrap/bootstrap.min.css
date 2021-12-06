@@ -40,6 +40,11 @@
     box-sizing: border-box
 }
 
+
+
+
+
+
 html {
     font-family: sans-serif;
     line-height: 1.15;
@@ -544,7 +549,7 @@ pre {
 
 @media (min-width:1200px) {
     .container {
-        max-width: 1140px
+        max-width: 1200px
     }
 }
 
@@ -1299,7 +1304,8 @@ pre {
     .col-lg-12 {
         -ms-flex: 0 0 100%;
         flex: 0 0 100%;
-        max-width: 100%
+        max-width: 100%;
+  
     }
 
     .order-lg-first {
