@@ -39,7 +39,7 @@ div.photo-container a span {
   cursor: default;
   line-height: 1.4;
   border-radius: 10px;
-  z-index: 1000;
+  z-index: 10000;
   display : inline-block;
   -webkit-text-fill-color: black;
 }

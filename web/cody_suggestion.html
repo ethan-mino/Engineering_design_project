@@ -49,62 +49,45 @@
                 width : 250px;
                 height : 450px;
                 border : 1px solid lightgray;
-                margin-right : 10px
+                margin-right : 30px
             }
 
             .suggestioned_cody{
-                width : 250px;
+                width : 300px;
                 height : 450px;
                 border : 1px solid lightgray;
             }
 
-            .container {
-
+            .owl-prev{
+                display: none;
             }
 
-            .col-centered {
-                float: none;
-                margin: 0 auto;
+            .owl-next{
+                display: none;
             }
 
-            .carousel-control {
-                width: 8%;
-                width: 0px;
-            }
-            .carousel-control.left,
-            .carousel-control.right {
-                margin-right: 40px;
-                margin-left: 32px;
-                background-image: none;
-                opacity: 1;
-            }
-            .carousel-control > a > span {
-                color: white;
-                font-size: 29px !important;
+            .client_review_slider img{
+                height : 490px;
+                object-fit: cover;
             }
 
-            .carousel-col {
-                position: relative;
-                min-height: 1px;
-                padding: 5px;
-                float: left;
+            .clothes_desc {
+                margin-top : 5px;
             }
 
-            .active > div { display:none; }
-            .active > div:first-child { display:block; }
-
-            .block {
-                width: 306px;
-                height: 230px;
+            .single_review_slider{
+                padding : 10px !important;
             }
 
-            .red {background: red;}
+            .selected_clothes{
+                border: 3px solid #b4dbed !important;
+            }
 
-            .blue {background: blue;}
+            .wear_clothes{
+                border-bottom : 1px solid lightgray;
+                margin-bottom : 1px;
+            }
 
-            .green {background: green;}
-
-            .yellow {background: yellow;}
         </style>
 
         <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
@@ -192,8 +175,13 @@
         </div>
     </header>
 
-        <section class="section_padding">
+        <section class="section_padding" style = "padding : 130px 0px 80px 0px">
             <div class="container">
+                <div class="add-product__row">
+                    <div class = "add-product__row-header">기준일</div>
+                    <input type="date" class= "add-product__input input-large" placeholder="스타일 입력" inputmode="numeric" value = "2021-09-12">
+                </div>
+
                 <div class="add-product__row">
                     <div class = "add-product__row-header">날씨</div>
                     <select class= "add-product__input input-large">
@@ -243,67 +231,116 @@
                         <option value="">화려한 스타일</option>
                     </select>
                 </div>
+
                 <button type="button" class ="confirm-button" data-label = "suggestion_btn" style = "float: right;">코디 추천</button>
+
+                <div class="photo-container" style = "float: right;">
+                    <a href='javascript:void(0);'>
+                        <img class="small-img" src="./img/question.png">
+                        <span style="width : 315px; left : -27.5em">상황, 날씨, 요일, 사용자의 스타일 등에 맞춰 코디를 추천해줌.</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class = "weather" style="display : none; justify-content: center; width : 100%; align-items: center">
+                <h3><strong><span class = "date" style = "margin-right : 90px"></span></strong></h3>
+                <img src="./img/rain.jpeg" alt="">
             </div>
         </section>
 
-        <section class="container suggestion" style = "display: flex; justify-content: center; padding : 30px 0px 40px 0px">
+        <section class="container suggestion" style = "display: none; justify-content: center; padding : 30px 0px 40px 0px">
             <div class = "clothes_container scrollbar">
 
             </div>
 
             <div class="suggestioned_cody" style = "position: relative">
-                <img src="" alt="" class = "">
-                <button type="button" class ="confirm-button" data-label = "save_cody" style = "float: right; margin : 0px; position : absolute; bottom : 5px; right : 5px">코디 저장</button>
+                <img src="./img/mypage/style1.jpg" alt="" class = "" width="300" height="450">
+                <button type="button" class ="confirm-button none" data-label = "save_cody" style = "float: right; margin : 0px; position : absolute; bottom : 5px; right : 5px">코디 저장</button>
             </div>
         </section>
 
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-11 col-md-10 col-centered">
+        <section class="client_review none" style = "padding : 0px 0px 50px 0px; border : none">
+            <div class="container">
+                <div style="display: flex">
+                    <h2><span>추천된 코디</span></h2>
 
-                    <div id="carousel" class="carousel slide" data-ride="carousel" data-type="multi" data-interval="2500">
-                        <div class="carousel-inner">
-                            <div class="item active">
-                                <div class="carousel-col">
-                                    <div class="block red img-responsive"></div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="carousel-col">
-                                    <div class="block green img-responsive"></div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="carousel-col">
-                                    <div class="block blue img-responsive"></div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="carousel-col">
-                                    <div class="block yellow img-responsive"></div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="photo-container" style = "float: right;">
+                        <a href='javascript:void(0);'>
+                            <img class="small-img" src="./img/question.png">
+                            <span style="width : 490px;">
+                                - 사용자의 옷장이나 쇼핑몰 상품을 기반으로 코디를 추천해줌. <br/>
+                                - 추천받은 코디를 착용한 아바타와 아바타가 착용한 옷의 정보가 나타남. <br/>
+                                - 아바타의 체형은 사용자의 체형에 맞춰 설정됨. <br/>
+                                - 옷 이미지에 마우스를 올리면, 옷장의 옷인지, 어느 쇼핑몰의 옷인지 등 옷에 대한 정보가 나타남. <br/>
+                                - 추천 받은 코디는 오른쪽 하단의 버튼을 통해 저장할 수 있음. <br/>
+                                - 제일 하단에서는 함께 추천 받은 여러 코디들을 확인할 수 있음.<br/> </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="client_review_slider owl-carousel">
+                            <div class="single_review_slider">
+                                <img src="img/mypage/style1.jpg">
 
-                        <!-- Controls -->
-                        <div class="left carousel-control">
-                            <a href="#carousel" role="button" data-slide="prev">
-                                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                        </div>
-                        <div class="right carousel-control">
-                            <a href="#carousel" role="button" data-slide="next">
-                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                            </a>
+                                <div class = "clothes_desc">
+                                    <strong>스타일 : </strong><span class="style">세련된 스타일</span><br/>
+                                </div>
+                            </div>
+
+                            <div class="single_review_slider">
+                                <img src="img/mypage/style2.jpg">
+
+                                <div class = "clothes_desc">
+                                    <div class="style"></div>
+                                    <strong>스타일 : </strong><span class="style">깔끔한 스타일</span><br/>
+                                </div>
+                            </div>
+
+                            <div class="single_review_slider">
+                                <img src="img/mypage/style3.jpg">
+
+                                <div class = "clothes_desc">
+                                    <strong>스타일 : </strong><span class="style">격식 있는 스타일</span><br/>
+                                </div>
+                            </div>
+
+                            <div class="single_review_slider">
+                                <img src="img/mypage/style4.jpg">
+
+                                <div class = "clothes_desc">
+                                    <strong>스타일 : </strong><span class="style">힙한 스타일</span><br/>
+                                </div>
+                            </div>
+
+                            <div class="single_review_slider">
+                                <img src="img/mypage/style5.jpg">
+
+                                <div class = "clothes_desc">
+                                    <strong>스타일 : </strong><span class="style">스트릿 스타일</span><br/>
+                                </div>
+                            </div>
+
+                            <div class="single_review_slider">
+                                <img src="img/mypage/style6.jpg">
+
+                                <div class = "clothes_desc">
+                                    <strong>스타일 : </strong><span class="style">자연스럽고 편안한 스타일</span><br/>
+                                </div>
+                            </div>
+
+                            <div class="single_review_slider">
+                                <img src="img/mypage/style7.jpg">
+
+                                <div class = "clothes_desc">
+                                    <strong>스타일 : </strong><span class="style">화려한 스타일</span><br/>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
                 </div>
             </div>
-        </div>
+        </section>
 
         <div class="loading-bg dark-bg dark-bg--middle none"></div>
         <div class="infinityChrome none">
@@ -313,17 +350,44 @@
         </div>
 
         <script>
+            const data_list = [{img_url : "./img/mypage/clothes5.jpg", name : "Mmlg Hood", source : "옷장"},
+                {img_url : "./img/mypage/clothes9.jpg", name : "S.S 체인 목걸이", source : "옷장"},
+                {img_url : "./img/mypage/clothes6.jpg", name : "컷팅 디테일 스트레이트 진", source : "옷장"},
+                {img_url : "./img/mypage/clothes10.jpg", name : "웰던 더비 구두 루시 블랙", source : "Covernat"},
+                {img_url : "./img/mypage/clothes11.jpg", name : "WOMEN 오버핏 무스탕", source : "oioi"}
+            ]
+
+            $(document).on("click", ".single_review_slider", (event) => {
+                const target = event.target
+                const clothes_name = $(target).closest(".single_review_slider").children(".clothes_desc").children(".style")[0].innerText
+
+                $(".single_review_slider").removeClass("selected_clothes")
+
+                for (let slider of $(".single_review_slider")){
+                    if($(slider).children(".clothes_desc").children(".style")[0].innerText === clothes_name){
+                        $(slider).addClass("selected_clothes")
+                    }
+                }
+                const cody_img_src = $(target).closest(".single_review_slider").children("img").prop("src")
+
+                $(".suggestioned_cody").children("img").prop("src", cody_img_src)
+                $(".clothes_container").empty();
+
+                shuffle(data_list)
+
+                for(let data of data_list){
+                    $(".clothes_container").append(`
+                        <div class="photo-container">
+                            <a href='javascript:void(0);'>
+                                <img src='${data.img_url}'>
+                                <span style="width : 200px; left : 2.5em; padding : 10px"><strong>옷 이름 : </strong> ${data.name}</br> <strong>출처 : </strong> ${data.source}</br></span>
+                            </a>
+                        </div>
+                        `)
+                }
+            })
+
             $("button[data-label = 'suggestion_btn']").on("click", async (event) => {
-                const data  = [{img_url : "./img/mypage/clothes5.jpg", name : "Mmlg Hood", source : "옷장"},
-                    {img_url : "./img/mypage/clothes9.jpg", name : "S.S 체인 목걸이", source : "옷장"},
-                    {img_url : "./img/mypage/clothes6.jpg", name : "컷팅 디테일 스트레이트 진", source : "옷장"},
-                    {img_url : "./img/mypage/clothes10.jpg", name : "웰던 더비 구두 루시 블랙", source : "Covernat"},
-                    {img_url : "./img/mypage/clothes11.jpg", name : "WOMEN 오버핏 무스탕", source : "oioi"}
-                ]
-
-                const cody_list = ["./img/mypage/style1.jpg", "./img/mypage/style2.jpg", "./img/mypage/style3.jpg", "./img/mypage/style4.jpg", "./img/mypage/style5.jpg", "./img/mypage/style6.jpg", "./img/mypage/style7.jpg"]
-
-
                 $(".loading-bg").removeClass("none")
                 $(".infinityChrome").removeClass("none")
 
@@ -331,24 +395,51 @@
 
                 $(".loading-bg").addClass("none")
                 $(".infinityChrome").addClass("none")
-            })
 
-            $('.carousel[data-type="multi"] .item').each(function() {
-                var next = $(this).next();
-                if (!next.length) {
-                    next = $(this).siblings(':first');
-                }
-                next.children(':first-child').clone().appendTo($(this));
+                $(".weather").css("display", "flex")
+                console.log($("input[type = 'date']").val())
+                $(".weather .date").text($("input[type = 'date']").val())
 
-                for (var i = 0; i < 2; i++) {
-                    next = next.next();
-                    if (!next.length) {
-                        next = $(this).siblings(':first');
+                $(".suggestion").css("display", "flex")
+                $("button[data-label = 'save_cody']").css("display", "block")
+                $(".client_review").css("display", "block")
+
+                shuffle(data_list)
+
+                for(let data of data_list){
+
+                    if(data.source === "옷장"){
+                        $(".clothes_container").append(`
+                        <div class="photo-container">
+                            <a href='javascript:void(0);'>
+                                <img src='${data.img_url}'>
+                                <span style="width : 200px; left : 2.5em; padding : 10px 10px 5px 10px"><strong>옷 이름 : </strong> ${data.name}</br> <strong>출처 : </strong> ${data.source}</br>
+                                </span>
+                            </a>
+                        </div>
+                        `)
+                    }else{
+                        $(".clothes_container").append(`
+                        <div class="photo-container">
+                            <a href='javascript:void(0);'>
+                                <img src='${data.img_url}'>
+                                <span style="width : 200px; left : 2.5em; padding : 10px 10px 5px 10px"><strong>옷 이름 : </strong> ${data.name}</br> <strong>출처 : </strong> ${data.source}</br>
+                                    <p style = "float : right">▶</p>
+                                </span>
+                            </a>
+                        </div>
+                        `)
                     }
-
-                    next.children(':first-child').clone().appendTo($(this));
                 }
             });
+
+            $(document).on("click", ".clothes_container p", (event) => {
+                window.location.href = "./single-product.html"
+            })
+
+            $("button[data-label = 'save_cody']").on("click", () => {
+                swalAlert({icon : "success", html : "저장되었습니다."})
+            })
         </script>
 
 
@@ -413,5 +504,6 @@
         <!-- custom js -->
         <script src="js/custom.js"></script>
         <script src="js/common.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     </body>
 </html>
