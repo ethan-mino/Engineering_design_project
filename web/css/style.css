@@ -17,6 +17,42 @@ body {
   font-size: 14px;
 }
 
+div.photo-container {
+  position: relative;
+}
+
+div.photo-container a {
+  text-decoration: none;
+  color: black;
+  cursor: default;
+  font-weight: normal;
+}
+
+div.photo-container a span {
+  visibility: hidden;
+  position: absolute;
+  left: 2.5em;
+  top: -2.3em;
+  background: #fff;
+  border: 1px solid #404040;
+  font-size: 0.8em;
+  padding: 0.3em;
+  cursor: default;
+  line-height: 1.4;
+  border-radius: 10px;
+  z-index: 1000;
+}
+
+div.photo-container a:hover span {
+  visibility: visible;
+}
+
+.small-img{
+  width: 20px;
+  height: 20px;
+  image-rendering: unset;
+}
+
 img{
   backface-visibility: hidden;
   transform: translateZ(0);
@@ -42,6 +78,10 @@ img{
   justify-content: center;
   align-items: center;
   z-index: 1000;
+}
+
+.none{
+  display: none;
 }
 
 .icon-plus{
@@ -5755,6 +5795,7 @@ h6 {
   background: transparent;
 }
 
+/* line 1078, /Applications/MAMP/htdocs/palash/cl/july 2019/193 Travel/193 travel html/sass/_elements.scss */
 /* line 1078, /Applications/MAMP/htdocs/palash/cl/july 2019/193 Travel/193 travel html/sass/_elements.scss */
 .form-select .current {
   margin-right: 50px;
