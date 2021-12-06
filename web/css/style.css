@@ -31,8 +31,7 @@ div.photo-container a {
 div.photo-container a span {
   visibility: hidden;
   position: absolute;
-  left: 2.5em;
-  top: -2.3em;
+  left: 3.5em;
   background: #fff;
   border: 1px solid #404040;
   font-size: 0.8em;
@@ -41,6 +40,8 @@ div.photo-container a span {
   line-height: 1.4;
   border-radius: 10px;
   z-index: 1000;
+  display : inline-block;
+  -webkit-text-fill-color: black;
 }
 
 div.photo-container a:hover span {
@@ -51,6 +52,7 @@ div.photo-container a:hover span {
   width: 20px;
   height: 20px;
   image-rendering: unset;
+  margin-left : 10px;
 }
 
 img{

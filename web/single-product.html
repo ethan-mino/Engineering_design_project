@@ -74,9 +74,52 @@
 		marbut {
 			padding-left: 170px;
 		}
+
+		div.photo-container {
+			position: relative;
+		}
+
+		div.photo-container a {
+			text-decoration: none;
+			color: black;
+			cursor: default;
+			font-weight: normal;
+		}
+
+		div.photo-container a span {
+			visibility: hidden;
+			position: absolute;
+			left: 3.5em;
+			background: #fff;
+			border: 1px solid #404040;
+			font-size: 0.8em;
+			padding: 0.3em;
+			cursor: default;
+			line-height: 1.4;
+			border-radius: 10px;
+			z-index: 1000;
+			display : inline-block;
+			-webkit-text-fill-color: black;
+		}
+
+		div.photo-container a:hover span {
+			visibility: visible;
+		}
+
 		.small-img{
-			width:20px;
-			height:20px;
+			width: 20px;
+			height: 20px;
+			image-rendering: unset;
+			margin-left : 10px;
+		}
+
+		.icon_btn > i.change:before {
+			content : "❤" !important;
+			color : red !important;
+		}
+
+		.product_count{
+			margin-top : 10px
 		}
 	</style>
 
@@ -191,9 +234,22 @@
 						<h3>오버사이즈 멜톤 더플 롱 코트 (네이비)</h3>
 						<h2><dett>155,000원<dett> </h2> <h2>95,400원<br><br><br></h2>
 						<ul class="list">
-							<li><a class="active" href="#"><span>Category</span> : 겨울 코트</a></li>
-							<li><a href="#"><span>Brand</span> :  파르티멘토</a></li>
-							<li><a href="#"><span>추천율</span> : 87%</a></li>
+							<li><a class="active" href='javascript:void(0);'><span>Category</span> : 겨울 코트</a></li>
+							<li><a href='javascript:void(0);'><span>Brand</span> :  파르티멘토</a></li>
+							<li><a href='javascript:void(0);'>
+								<div style="display: flex">
+									<span>추천율</span> : 87%
+									<div class="photo-container">
+										<a href='javascript:void(0);'>
+											<img class="small-img" src="./img/question.png">
+											<span style = "width : 440px">
+												사용자의 옷장과 스타일, 그리고 최근 유행을 기준으로 상품의 추천도가 표시됨.
+                            				</span>
+										</a>
+									</div>
+								</div>
+							</a>
+							</li>
 						</ul>
 						<p>
 							INFO<br>
@@ -221,9 +277,7 @@
 						</div>
 
 						<div class="card_area d-flex align-items-center">
-
-							<a class="icon_btn" href="#"><i class="lnr lnr lnr-heart"></i></a>
-
+							<a class="icon_btn" href='javascript:void(0);'><i class="lnr lnr lnr-heart"></i></a>
 						</div>
 					</div>
 				</div>
@@ -249,12 +303,6 @@
 					<a class="nav-link active" id="review-tab" data-toggle="tab" href="#review" role="tab" aria-controls="review"
 					   aria-selected="false">리뷰</a>
 				</li>
-				<div class="photo-container">
-					<a href="#">
-						<img class="small-img" src="./img/question.png">
-						<span>상세정보/사이즈</br>- 옷의 구체적인 사진 및 정보와 사이즈를 알려줌</br>리뷰</br>-다른 사용자의 실제 착용 사진 및 리뷰를 모아 보여줌</span>
-					</a>
-				</div>
 			</ul>
 			<div class="tab-content" id="myTabContent">
 				<div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab">
@@ -331,13 +379,7 @@
 							<div class="row total_rate">
 								<div class="col-6">
 									<div class="box_total">
-										<h5>Overall</h5>
-										<div class="photo-container">
-											<a href="#">
-												<img class="small-img" src="./img/question.png">
-												<span>아래 사용자들의 리뷰 평점 평균을 보여줌</span>
-											</a>
-										</div>
+										<h5>평점 평균</h5>
 										<h4>4.7</h4>
 										<h6>(329 Reviews)</h6>
 									</div>
@@ -445,28 +487,33 @@
 							<div class="row total_rate">
 								<div class="col-6">
 									<div class="box_total">
-										<h5>스타일</h5>
-										<div class="photo-container">
-											<a href="#">
-												<img class="small-img" src="./img/question.png">
-												<span>해당 옷이 사용자의 스타일과 얼마나 일치하는지 보여줌</span>
-											</a>
+										<div style = "display: flex; justify-content: center">
+											<h5>스타일</h5>
+											<div class="photo-container">
+												<a href="#">
+													<img class="small-img" src="./img/question.png">
+													<span style="width : 295px">해당 옷이 사용자의 스타일과 얼마나 일치하는지 보여줌</span>
+												</a>
+											</div>
 										</div>
+
 										<h4>89%</h4>
 										<h6>매우 높아요!</h6>
-
 									</div>
 
 								</div>
 								<div class="col-6">
 									<div class="box_total">
-										<h5>브랜드</h5>
-										<div class="photo-container">
-											<a href="#">
-												<img class="small-img" src="./img/question.png">
-												<span>해당 옷이 평소 사용자가 선호하는 브랜드와 유사하는지 보여줌</span>
-											</a>
+										<div style = "display: flex; justify-content: center">
+											<h5>브랜드</h5>
+											<div class="photo-container">
+												<a href="#">
+													<img class="small-img" src="./img/question.png">
+													<span style="width : 330px">해당 옷이 평소 사용자가 선호하는 브랜드와 유사하는지 보여줌</span>
+												</a>
+											</div>
 										</div>
+
 										<h4>76%</h4>
 										<h6>높아요!</h6>
 
@@ -477,28 +524,33 @@
 							<div class="row total_rate">
 								<div class="col-6">
 									<div class="box_total">
-										<h5>색깔</h5>
-										<div class="photo-container">
-											<a href="#">
-												<img class="small-img" src="./img/question.png">
-												<span>해당 옷이 사용자의 옷장에 있는 옷들과 색이 얼마나 일치하는지 보여줌</span>
-											</a>
+										<div style = "display: flex; justify-content: center">
+											<h5>색상</h5>
+											<div class="photo-container">
+												<a href="#">
+													<img class="small-img" src="./img/question.png">
+													<span style="width : 370px">해당 옷이 사용자의 옷장에 있는 옷들과 색이 얼마나 일치하는지 보여줌</span>
+												</a>
+											</div>
 										</div>
+
 										<h4>62%</h4>
 										<h6>평범해요</h6>
-
 									</div>
 
 								</div>
 								<div class="col-6">
 									<div class="box_total">
-										<h5>체형</h5>
-										<div class="photo-container">
-											<a href="#">
-												<img class="small-img" src="./img/question.png">
-												<span>해당 옷이 사용자의 체형을 얼마나 보완해줄 수 있는지 보여줌</span>
-											</a>
+										<div style = "display: flex; justify-content: center">
+											<h5>체형</h5>
+											<div class="photo-container">
+												<a href="#">
+													<img class="small-img" src="./img/question.png">
+													<span style="width : 275px">해당 옷이 사용자의 체형에 얼마나 적합한지 보여줌</span>
+												</a>
+											</div>
 										</div>
+
 										<h4>28%</h4>
 										<h6>별로에요..</h6>
 
@@ -509,18 +561,10 @@
 							<div class="review_box">
 
 								<h4>리뷰를 써보세요!</h4>
-								<p>별점</p>
-								<ul class="list">
-									<li><a href="#"><i class="fa fa-star"></i></a></li>
-									<li><a href="#"><i class="fa fa-star"></i></a></li>
-									<li><a href="#"><i class="fa fa-star"></i></a></li>
-									<li><a href="#"><i class="fa fa-star"></i></a></li>
-									<li><a href="#"><i class="fa fa-star"></i></a></li>
-								</ul>
 
 								<form action="#/" class="form-contact form-review mt-3">
 									<div class="form-group">
-										<input class="form-control" name="name" type="text" placeholder="리뷰에 보일 이름을 입력해 주세요" required>
+										<input class="form-control" name="name" type="text" placeholder="리뷰에 보일 이름을 입력해 주세요">
 									</div>
 
 									<div class="form-group">
@@ -659,9 +703,9 @@
 				<div class="col-sm-6 col-md-5">
 					<div class="single-footer-widget footer_icon">
 						<h4>프로젝트 정보</h4>
-						<p1>
+						<p>
 							상명대학교 공학설계입문 프로젝트<br>
-						</p1>
+						</p>
 					</div>
 				</div>
 
@@ -678,13 +722,12 @@
 				<div class="col-sm-6 col-md-5">
 					<div class="single-footer-widget">
 						<h4>팀원 정보</h4>
-						<ul class="line1">
-							<li><a href="#">201911010 정성우</a></li>
-							<li><a href="#">201411087 길민호</a></li>
-							<li><a href="#">202110902 권연정</a></li>
-							<li><a href="#">202110959 이다솔</a></li>
+						<ul style = "color : #fff">
+							<li>201911010 정성우</li>
+							<li>201411087 길민호</li>
+							<li>202110902 권연정</li>
+							<li>202110959 이다솔</li>
 						</ul>
-
 					</div>
 				</div>
 			</div>
@@ -699,7 +742,6 @@
 	<script src="vendors/nice-select/jquery.nice-select.min.js"></script>
 	<script src="vendors/jquery.ajaxchimp.min.js"></script>
 	<script src="vendors/mail-script.js"></script>
-	<script src="js/main.js"></script>
 
 	<script src="js/custom.js"></script>
 

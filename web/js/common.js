@@ -63,3 +63,8 @@ $(".uploadImage").on("change",function()
 });
 
 function delay(ms) {return new Promise(resolve => setTimeout(resolve, ms));}
+
+$(".icon_btn").on("click", (event) => {
+    const target = event.target;
+    $(target).closest(".icon_btn").children(".lnr-heart").toggleClass("change")
+})

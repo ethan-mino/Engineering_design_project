@@ -214,57 +214,25 @@
                     <div class="blog_right_sidebar">
                         <aside class="single_sidebar_widget post_category_widget">
                             <ul class="list cat-list">
-                                <div class="photo-container">
-                                    <a href="#">
-                                        <img class="small-img" src="./img/question.png">
-                                        <span>사용자의 개인정보 및 체형정보를 보여줌</span>
-                                    </a>
-                                </div>
                                 <li><span href="#" class="d-flex user-info active"><p>내 정보</p></span></li>
-                                <div class="photo-container">
-                                    <a href="#">
-                                        <img class="small-img" src="./img/question.png">
-                                        <span>
-                                            사용자가 옷장에 등록한 옷을 한눈에 보여주며 새로운 옷을 등록할 수 있음
-                                        </span>
-                                    </a>
-                                </div>
                                 <li><span href="#" class="d-flex my-closet"><p>마이 옷장</p></span></li>
-                                <div class="photo-container">
-                                    <a href="#">
-                                        <img class="small-img" src="./img/question.png">
-                                        <span>
-                                            사용자가 입은 옷들을 등록하면 달력에 정리하여 해당 날짜를 누르면 그 날 어떤 옷을 입었는지 보여줌
-                                        </span>
-                                    </a>
-                                </div>
                                 <li><span href="#" class="d-flex my-cody"><p>나만의 코디</p></span></li>
-                                <div class="photo-container">
-                                    <a href="#">
-                                        <img class="small-img" src="./img/question.png">
-                                        <span>
-                                            사용자의 옷장, 코디에 등록된 옷과 코디를 색과 스타일별로 분석하여 통계를 보여줌
-                                        </span>
-                                    </a>
-                                </div>
                                 <li><span href="#" class="d-flex style-analysis"><p>스타일 분석</p></span></li>
-                                <div class="photo-container">
-                                <a href="#">
-                                    <img class="small-img" src="./img/question.png">
-                                    <span>
-                                        사용자가 쇼핑몰에서 구매한 기록을 보여줌
-                                    </span>
-                                </a>
-                                </div>
-
-                    <li><span href="#" class="d-flex purchase-history"><p>구매 이력</p></span></li>
-                    </ul>
-                    </aside>
-                </div>
+                                <li><span href="#" class="d-flex purchase-history"><p>구매 이력</p></span></li>
+                            </ul>
+                     </aside>
+                    </div>
                 </div>
 
                 <div class="content col-lg-8 mb-5 mb-lg-0">
                     <div class="user-info">
+                        <div class="photo-container">
+                            <a href="#">
+                                <img class="small-img" src="./img/question.png">
+                                <span >사용자의 개인정보 및 체형을 설정할 수 있음. 이 체형 정보를 기반으로 아바타의 체형이 설정되며, 코디 추천 시에도 사용자를 분석하는데 사용됨.</span>
+                            </a>
+                        </div>
+
                         <div class="add-product__row">
                             <div class = "add-product__row-header">아이디</div>
                             <input type="text" class= "add-product__input input-large" data-label = "productName" placeholder="아이디 입력" value = "smusmu2021">
@@ -338,6 +306,13 @@
                             <select class= "add-product__input input-small" data-label = "clothes_type2">
                                 <option value=""> - </option>
                             </select>
+
+                            <div class="photo-container">
+                                <a href='javascript:void(0);'>
+                                    <img class="small-img" src="./img/question.png">
+                                    <span style = "width : 250px">사용자가 옷장에 등록한 옷을 유형별로 보여주며</br> 새로운 옷을 등록할 수 있음</span>
+                                </a>
+                            </div>
                         </div>
 
                         <section class="client_review section_padding">
@@ -403,7 +378,17 @@
                     </div>
 
                     <div class="my-cody" style = "display : none">
-                        <h4>나만의 코디</h4>
+                        <div style = "display: flex">
+                            <h4>나만의 코디</h4>
+                            <div class="photo-container">
+                                <a href='javascript:void(0);'>
+                                    <img class="small-img" src="./img/question.png">
+                                    <span style = "width : 380px"> 추천 받은 코디와 사용자가 직접 추가한 코디를 저장하거나 확인할 수 있음.</span>
+                                </a>
+                            </div>
+                        </div>
+
+
                         <section class="client_review section_padding">
                             <div class="container">
                                 <div class="row">
@@ -460,8 +445,16 @@
 
                             <button type="button" class ="confirm-button" data-label = "add_cody" onclick="window.location.href = './add_cody.html'" style = "float: right; margin : 0px 15px 0px 0px">코디 추가</button>
                         </section>
+                        <div style = "display: flex">
+                            <h4>코디 달력</h4>
+                            <div class="photo-container">
+                                <a href='javascript:void(0);'>
+                                    <img class="small-img" src="./img/question.png">
+                                    <span style = "width : 310px"> 해당 일에 사용자가 입은 코디를 기록하거나 확인할 수 있음.</br> 이 정보는 사용자의 스타일 분석과 코디 추천 시 사용됨.</span>
+                                </a>
+                            </div>
+                        </div>
 
-                        <h4>코디 달력</h4>
                         <section class="client_review section_padding" style = "border-top : 1px soild lightgray; display: flex">
                             <div id='app' style = "width : 400px"></div>
 
@@ -481,6 +474,13 @@
                     </div>
 
                     <div class="style-analysis" style = "display : none">
+                        <div class="photo-container" style=" margin-bottom : 10px">
+                            <a href='javascript:void(0);'>
+                                <img class="small-img" src="./img/question.png">
+                                <span style = "width : 310px;">코디 달력이나 옷장을 기반으로 사용자의 스타일을 분석하여 </br>시각적으로 표시해줌.</span>
+                            </a>
+                        </div>
+
                         <nav class="nav nav-pills flex-column flex-sm-row">
                             <div class="flex-sm-fill text-sm-center nav-link" data-label = "brand">브랜드별</div>
                             <div class="flex-sm-fill text-sm-center nav-link" data-label = "color">색상별</div>
@@ -491,7 +491,15 @@
                     </div>
 
                     <div class="purchase-history" style = "display : none">
-                        <h4><strong>2021.09.21</strong></h4>
+                        <div style = "display : flex">
+                            <h4><strong>2021.09.21</strong></h4>
+                            <div class="photo-container">
+                                <a href='javascript:void(0);'>
+                                    <img class="small-img" src="./img/question.png">
+                                    <span style="width : 225px">사용자가 쇼핑몰에서 구매한 기록을 보여줌</span>
+                                </a>
+                            </div>
+                        </div>
                         <table class="table">
                             <thead>
                             <tr>
@@ -584,42 +592,42 @@
     <!--================Blog Area =================-->
         <!--top place end-->
         <!-- footer part start-->
-        <footer class="footer-area">
-            <div class="container">
-                <div class="row justify-content-between">
-                    <div class="col-sm-6 col-md-5">
-                        <div class="single-footer-widget footer_icon">
-                            <h4>프로젝트 정보</h4>
-                            <p>
-                                상명대학교 공학설계입문 프로젝트<br>
-                            </p>
-                        </div>
+    <footer class="footer-area">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-sm-6 col-md-5">
+                    <div class="single-footer-widget footer_icon">
+                        <h4>프로젝트 정보</h4>
+                        <p>
+                            상명대학교 공학설계입문 프로젝트<br>
+                        </p>
                     </div>
+                </div>
 
-                    <div class="col-sm-6 col-md-6">
-                        <div class="single-footer-widget footer_icon">
-                            <h4>Contact Us</h4>
-                            <p>
-                                주소 : 서울시 종로구 홍지문2길 20 상명대학교 (제1공학관 G101-2호) <br>
-                                TEL. 02-2287-5292 FAX. 02-2287-0072
-                            </p>
-                        </div>
+                <div class="col-sm-6 col-md-6">
+                    <div class="single-footer-widget footer_icon">
+                        <h4>Contact Us</h4>
+                        <p>
+                            주소 : 서울시 종로구 홍지문2길 20 상명대학교 (제1공학관 G101-2호) <br>
+                            TEL. 02-2287-5292 FAX. 02-2287-0072
+                        </p>
                     </div>
+                </div>
 
-                    <div class="col-sm-6 col-md-5">
-                        <div class="single-footer-widget">
-                            <h4>팀원 정보</h4>
-                            <ul>
-                                <li><a href="#">201911010 정성우</a></li>
-                                <li><a href="#">201411087 길민호</a></li>
-                                <li><a href="#">202110902 권연정</a></li>
-                                <li><a href="#">202110959 이다솔</a></li>
-                            </ul>
-                        </div>
+                <div class="col-sm-6 col-md-5">
+                    <div class="single-footer-widget">
+                        <h4>팀원 정보</h4>
+                        <ul style = "color : #fff">
+                            <li>201911010 정성우</li>
+                            <li>201411087 길민호</li>
+                            <li>202110902 권연정</li>
+                            <li>202110959 이다솔</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </footer>
+        </div>
+    </footer>
 
         <script>
             function shuffle_closet(){
