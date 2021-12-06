@@ -66,6 +66,8 @@
                 background-position: center;
             }
         </style>
+        <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+        <script src="js/common.js"></script>
     </head>
 
     <body>
@@ -186,6 +188,7 @@
                         </div>
                         <div class="blog_left_sidebar">
                             <div class="blog_container">
+                                <!--
                                 <article class="blog_item">
                                     <div class="blog_item_img">
                                         <a href="single-community.html"><img class="card-img" src="img/community/스타일1.png" alt=""></a>
@@ -499,6 +502,7 @@
                                         </ul>
                                     </div>
                                 </article>
+                                -->
                             </div>
                         </div>
 
@@ -540,11 +544,9 @@
 
                             <aside class="single_sidebar_widget search_widget">
                                 <div class="form-group">
-                                    <form action="#">
+                                    <div >
                                         <div class="form-group">
-
                                             <div class="input-group mb-3">
-
                                                 <input type="text" class="form-control" placeholder='검색어를 입력하세요'
                                                        onfocus="this.placeholder = ''"
                                                        onblur="this.placeholder = '검색어를 입력하세요'">
@@ -553,11 +555,8 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <button class="button rounded-0 primary-bg text-white w-100 btn_1"
-                                                type="submit">
-                                            검색
-                                        </button>
-                                    </form>
+                                        <button class="button rounded-0 primary-bg text-white w-100 btn_1 search_btn"type="submit">검색</button>
+                                    </div>
                                 </div>
                             </aside>
 
@@ -714,6 +713,176 @@
                 </div>
             </div>
         </footer>
+        <script>
+            const data_list = [{
+                url : "img/community/스타일1.png",
+                id : "ootd_j",
+                style : "캐주얼룩",
+                like_num : "312",
+                comment : "109"
+            }, {
+                url : "img/community/스타일6.png",
+                id : "hamm_",
+                style : "댄디룩",
+                like_num : "202",
+                comment : "82"
+            }, {
+                url : "img/community/스타일3.png",
+                id : "rlo_hsa",
+                style : "미니멀룩",
+                like_num : "313",
+                comment : "104"
+            }, {
+                url : "img/community/스타일4.png",
+                id : "smoooongi",
+                style : "캐주얼룩",
+                like_num : "308",
+                comment : "172"
+            }, {
+                url : "img/community/스타일5.png",
+                id : "moly_96",
+                style : "모던룩",
+                like_num : "189",
+                comment : "111"
+            }, {
+                url : "img/community/스타일11.png",
+                id : "helloworld",
+                style : "미니멀룩",
+                like_num : "523",
+                comment : "327"
+            }, {
+                url : "img/community/스타일15.png",
+                id : "somethingspecial",
+                style : "놈코어룩",
+                like_num : "310",
+                comment : "132"
+            }, {
+                url : "img/community/스타일14.png",
+                id : "jiwoo_00",
+                style : "캐주얼룩",
+                like_num : "391",
+                comment : "138"
+            }, {
+                url : "img/community/스타일16.png",
+                id : "giwoong_94",
+                style : "댄디룩",
+                like_num : "482",
+                comment : "218"
+            }, {
+                url : "img/community/스타일12.png",
+                id : "fashionista_",
+                style : "사파리룩",
+                like_num : "371",
+                comment : "238"
+            }, {
+                url : "img/community/스타일17.png",
+                id : "pyo_jji",
+                style : "캐주얼룩",
+                like_num : "283",
+                comment : "128"
+            }, {
+                url : "img/community/스타일3.png",
+                id : "yeji0_0",
+                style : "페미닌룩",
+                like_num : "218",
+                comment : "120"
+            }, {
+                url : "img/community/스타일18.png",
+                id : "yolo_life",
+                style : "댄디룩",
+                like_num : "309",
+                comment : "119"
+            }, {
+                url : "img/community/스타일19.png",
+                id : "yummy_3",
+                style : "정장룩",
+                like_num : "219",
+                comment : "159"
+            }, {
+                url : "img/community/스타일20.png",
+                id : "jerry_01",
+                style : "놈코어룩",
+                like_num : "211",
+                comment : "143"
+            }, {
+                url : "img/community/스타일21.png",
+                id : "hannaprincess",
+                style : "캐주얼룩",
+                like_num : "341",
+                comment : "198"
+            }, {
+                url : "img/community/스타일23.png",
+                id : "forever_young",
+                style : "댄디룩",
+                like_num : "290",
+                comment : "117"
+            }, {
+                url : "img/community/스타일22.png",
+                id : "teddy_bear",
+                style : "캐주얼룩",
+                like_num : "259",
+                comment : "147"
+            }];
+
+            function shuffle_post(){
+                let start = 0
+                const $blog_left_sidebar = $(".blog_left_sidebar")
+                $blog_left_sidebar.empty();
+
+                shuffle(data_list)
+                while(!(start >= data_list.length)){
+                    const temp_data_list = data_list.slice(start, start + 3)
+                    const  $blog_container = $("<div class = 'blog_container'></div>")
+
+                    for (let temp_data of temp_data_list){
+                        $blog_container.append(`
+                        <article class="blog_item">
+                                    <div class="blog_item_img">
+                                        <a href="single-community.html"><img class="card-img" src="${temp_data.url}" alt=""></a>
+                                    </div>
+
+                                    <div class="blog_details">
+                                        <a class="d-inline-block" href="single-community.html">
+                                            <h2>${temp_data.id}</h2>
+                                        </a>
+                                        <p>${temp_data.style}</p>
+                                        <ul class="blog-info-link">
+                                            <li><a href='javascript:void(0);'><i class="far fa-user"></i> 좋아요 ${temp_data.like_num}</a></li>
+                                            <li><a href='javascript:void(0);'><i class="far fa-comments"></i> 댓글 ${temp_data.comment} </a></li>
+                                        </ul>
+                                    </div>
+                                </article>`)
+                    }
+
+                    $blog_left_sidebar.append($blog_container)
+                    start += 3
+                }
+            }
+            (function initialize(){
+                shuffle_post()
+            })()
+
+            $(".search_btn").on("click", () => {
+                shuffle_post()
+            })
+
+            $(".cat-list").on("click", (event) => {
+                const target = event.target
+
+                $(".cat-list p").css("color", "#a2a2a2")
+                $(target).closest("a").children("p").css("color", "#ff7e5f")
+
+                shuffle_post()
+            })
+
+            $(".page-item").on("click", (event) =>{
+                const target = event.target
+
+                $(".page-item").addClass("active")
+                $(target).closest(".page-item").removeClass("active")
+                shuffle_post()
+            })
+        </script>
         <!-- footer part end-->
         <!-- jquery plugins here-->
         <script src="js/jquery-1.12.1.min.js"></script>

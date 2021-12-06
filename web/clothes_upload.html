@@ -159,12 +159,21 @@
 
     <div class="content section_padding">
         <div class="container">
-            <div class="imgUp">
-                <div class="imagePreview">
-                    <i class="seller-icon icon-plus" aria-hidden="true"></i>
+            <div style = "display: flex; justify-content: center">
+                <div class="imgUp">
+                    <div class="imagePreview">
+                        <i class="seller-icon icon-plus" aria-hidden="true"></i>
+                    </div>
+                    <input type="file" class="uploadImage" value="UploadImage">
+                </div><!-- col-2 -->
+
+                <div class="photo-container">
+                    <a href='javascript:void(0);'>
+                        <img class="small-img" src="./img/question.png">
+                        <span style = "width : 375px">옷의 이미지를 업로드 하거나 옷의 카테고리, 색상, 재질, 메모 등을 입력하여 옷장에 옷을 등록할 수 있음.</span>
+                    </a>
                 </div>
-                <input type="file" class="uploadImage" value="UploadImage">
-            </div><!-- col-2 -->
+            </div>
 
             <div class="add-product__row">
                 <div class = "add-product__row-header">옷 유형 <span class = "necessary">*</span></div>

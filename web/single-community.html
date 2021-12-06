@@ -52,6 +52,7 @@
             image-rendering: unset;
         }
     </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
 </head>
 
 
@@ -173,12 +174,6 @@
                         </div>
                         <div class="blog_details">
                             <h2>ootd_j</h2>
-                            <div class="photo-container">
-                                <a href="#">
-                                    <img class="small-img" src="./img/question.png">
-                                    <span>사용자의 실제 코디 착용 사진과 착용한 옷의 세부 사진 및 코디에 대한 설명</span>
-                                </a>
-                            </div>
                             <ul class="blog-info-link mt-3 mb-4">
                                 <li><a href="#"><i class="far fa-user"></i> 캐주얼룩 </a></li>
                                 <li><a href="#"><i class="far fa-comments"></i> 댓글 109 </a></li>
@@ -254,12 +249,7 @@
                                         <a href="#">
                                             <h4>ootd_j</h4>
                                         </a>
-                                        <div class="photo-container">
-                                            <a href="#">
-                                                <img class="small-img" src="./img/question.png">
-                                                <span>해당 게시물 작성자의 프로필과 키/체중 등 체형 정보</span>
-                                            </a>
-                                        </div>
+
                                         <p>체형정보</p>
                                         <p>키 165cm / 체중 50kg</p>
                                     </div>
@@ -423,8 +413,8 @@
                                 </ul>
                             </nav>
                             <div class="comment-form">
-                                <h4>댓글달기</h4>
-                                <form class="form-contact comment_form" action="#" id="commentForm">
+                                <h4>댓글 달기</h4>
+                                <div class="form-contact comment_form" action="#" id="commentForm">
                                     <div class="row">
                                         <div class="col-12">
                                             <div class="form-group">
@@ -432,59 +422,17 @@
                                             </div>
                                         </div>
                                     </div>
+                                </div>
                             </div>
                         </div>
                         <div class="form-group">
-                            <button type="submit" class="button button-contactForm btn_1">달기</button>
+                            <button type="submit" class="button button-contactForm btn_1">작성</button>
                         </div>
                         </form>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="blog_right_sidebar">
-                        <aside class="single_sidebar_widget search_widget">
-                        </aside>
-                        <aside class="single_sidebar_widget post_category_widget">
-                            <h4 class="widget_title">스타일 카테고리</h4>
-                            <ul class="list cat-list">
-                                <li>
-                                    <a href="#" class="d-flex">
-                                        <p>캐쥬얼룩</p>
-                                        <p>(37)</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="d-flex">
-                                        <p>정장룩</p>
-                                        <p>(10)</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="d-flex">
-                                        <p>바캉스룩</p>
-                                        <p>(03)</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="d-flex">
-                                        <p>스포티</p>
-                                        <p>(11)</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="d-flex">
-                                        <p>미니멀룩</p>
-                                        <p>(21)</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="d-flex">
-                                        <p>클래식룩</p>
-                                        <p>(09)</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </aside>
                         <aside class="single_sidebar_widget popular_post_widget">
                             <h3 class="widget_title">최근 게시물</h3>
                             <div class="media post_item">
@@ -567,6 +515,12 @@
             </div>
         </div>
     </footer>
+    <script>
+        $(".button-contactForm").on("click", () => {
+            swalAlert({icon : "success", html : "작성되었습니다."})
+        })
+    </script>
+
     <!-- footer part end-->
     <!-- jquery plugins here-->
     <script src="js/jquery-1.12.1.min.js"></script>
@@ -591,6 +545,8 @@
     <script src="js/contact.js"></script>
     <!-- custom js -->
     <script src="js/custom.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="js/common.js"></script>
 </body>
 
 </html>
