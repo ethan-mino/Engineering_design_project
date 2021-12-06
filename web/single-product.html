@@ -22,6 +22,10 @@
 
 
 	<style>
+		.navbar-nav{
+			align-items: center;
+		}
+
 		dett {
 			text-decoration: line-through;
 			color: #fe5c24;
@@ -199,6 +203,12 @@
 									<li class="nav-item">
 										<a class="nav-link" href="mypage.html">마이페이지</a>
 									</li>
+									<li class="nav-item">
+										<a href="./cart.html"><img src="./img/cart.jpg" alt="" style = "margin-left : 100px; width : 50px; height : 50px "></a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="login.html" style = "float: right">로그인/로그아웃</a>
+									</li>
 								</ul>
 							</div>
 						</nav>
@@ -271,8 +281,7 @@
 							<button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;"
 									class="reduced items-count" type="button">
 							</button>
-							<a class="button primary-btn" href="cart.html">장바구니</a>
-
+							<a class="cart_btn button primary-btn" href='javascript:void(0);'>장바구니</a>
 
 						</div>
 
@@ -734,7 +743,15 @@
 		</div>
 	</footer>
 
+	<script>
+		$("a.cart_btn").on("click", () => {
+			swalAlert({icon : "success", html : "장바구니에 상품을 담았습니다."})
+		})
 
+		$(".button-review").on("click", () => {
+			swalAlert({icon : "success", html : "리뷰가 작성되었습니다."})
+		})
+	</script>
 	<script src="vendors/jquery/jquery-3.2.1.min.js"></script>
 	<script src="vendors/bootstrap/bootstrap.bundle.min.js"></script>
 	<script src="vendors/skrollr.min.js"></script>

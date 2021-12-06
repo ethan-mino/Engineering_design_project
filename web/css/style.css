@@ -21,6 +21,10 @@ div.photo-container {
   position: relative;
 }
 
+.navbar-nav{
+  align-items: center;
+}
+
 div.photo-container a {
   text-decoration: none;
   color: black;
