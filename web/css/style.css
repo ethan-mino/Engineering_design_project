@@ -17,6 +17,10 @@ body {
   font-size: 14px;
 }
 
+.main_menu_iner a:hover {
+  color: #ff7e5f;
+}
+
 div.photo-container {
   position: relative;
 }

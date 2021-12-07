@@ -489,9 +489,9 @@
                         </div>
 
                         <nav class="nav nav-pills flex-column flex-sm-row">
-                            <div class="flex-sm-fill text-sm-center nav-link" data-label = "brand">브랜드별</div>
-                            <div class="flex-sm-fill text-sm-center nav-link" data-label = "color">색상별</div>
-                            <div class="flex-sm-fill text-sm-center nav-link" data-label = "type">유형별</div>
+                            <div class="flex-sm-fill text-sm-center nav-link" data-label = "brand" style = "cursor: pointer">브랜드별</div>
+                            <div class="flex-sm-fill text-sm-center nav-link" data-label = "color" style = "cursor: pointer">색상별</div>
+                            <div class="flex-sm-fill text-sm-center nav-link" data-label = "type" style = "cursor: pointer">유형별</div>
                         </nav>
 
                         <img class = "analysis_img" src="" style = "display:none; margin-top : 50px">
@@ -660,6 +660,7 @@
 
                 $(`.content`).children("div").css("display", "none")
                 $(`.content div.${targetClass}`).css("display", "block")
+                $(".nav-link[data-label = 'brand']")[0].click()
             })
 
             $("button[data-label = 'user_info_update']").on("click", () => {
