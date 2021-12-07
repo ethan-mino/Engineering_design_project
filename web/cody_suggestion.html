@@ -388,14 +388,29 @@
                 shuffle(data_list)
 
                 for(let data of data_list){
-                    $(".clothes_container").append(`
+
+                    if(data.source === "옷장"){
+                        $(".clothes_container").append(`
                         <div class="photo-container">
                             <a href='javascript:void(0);'>
                                 <img src='${data.img_url}'>
-                                <span style="width : 200px; left : 2.5em; padding : 10px"><strong>옷 이름 : </strong> ${data.name}</br> <strong>출처 : </strong> ${data.source}</br></span>
+                                <span style="width : 200px; left : 2.5em; padding : 10px 10px 5px 10px"><strong>옷 이름 : </strong> ${data.name}</br> <strong>출처 : </strong> ${data.source}</br>
+                                </span>
                             </a>
                         </div>
                         `)
+                    }else{
+                        $(".clothes_container").append(`
+                        <div class="photo-container">
+                            <a href='javascript:void(0);'>
+                                <img src='${data.img_url}'>
+                                <span style="width : 200px; left : 2.5em; padding : 10px 10px 5px 10px"><strong>옷 이름 : </strong> ${data.name}</br> <strong>출처 : </strong> ${data.source}</br>
+                                    <p style = "float : right">▶</p>
+                                </span>
+                            </a>
+                        </div>
+                        `)
+                    }
                 }
             })
 
